@@ -29,7 +29,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-      
+ios/index/DataStore      
 
 # Android/IntelliJ
 #
@@ -43,4 +43,11 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
+
+# Eclipse specific files/directories
+.classpath
+.project
+.settings
+.metadata
+bin/
       
