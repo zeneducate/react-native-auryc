@@ -24,4 +24,19 @@ Auryc.identify('abc@example.com')
 Auryc.addUserProperties({'company': 'Example Inc'});
 ...
 ```
-  
+## Notes
+### Android integration
+React-Native uses Android SDK version 23 which might introduce conflicts when newer version of SDK is used in your project.
+Consider adding the following block to build.gradle to resolve this.
+```Java
+subprojects {
+     afterEvaluate {project ->
+         if (project.hasProperty("android")) {
+             android {
+                 compileSdkVersion 25
+                 buildToolsVersion '25.0.0'
+            }
+         }
+    }
+}
+```
