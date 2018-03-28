@@ -19,7 +19,7 @@ Then you use Auryc in Javascript as decribed below.
 ```javascript
 import Auryc from 'react-native-auryc';
 
-// TODO: What to do with the module?
+// calling APIs
 Auryc.identify('abc@example.com')
 Auryc.addUserProperties({'company': 'Example Inc'});
 ...
