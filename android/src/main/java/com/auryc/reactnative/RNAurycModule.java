@@ -66,4 +66,6 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   public static final void identify(final String identity) {
     Auryc.identify(identity);
   }
+
+  // TODO: add masking APIs
 }

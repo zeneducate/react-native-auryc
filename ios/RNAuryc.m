@@ -22,5 +22,29 @@ RCT_EXPORT_METHOD(track: (NSString *) eventName properties: (NSDictionary *) pro
     [[Auryc mainInstance] track: eventName properties: properties];
 }
 
+RCT_EXPORT_METHOD(markALLTextFieldsAsSensitiveInformation: (BOOL) visible){
+    [[Auryc mainInstance] markALLTextFieldsAsSensitiveInformation: visible];
+}
+
+RCT_EXPORT_METHOD(markViewAsSensitiveInformation: (UIView *) view){
+    [[Auryc mainInstance] markViewAsSensitiveInformation: view];
+}
+
+RCT_EXPORT_METHOD(unMarkViewAsSensitiveInformation: (UIView *) view){
+    [[Auryc mainInstance] unMarkViewAsSensitiveInformation: view];
+}
+
+RCT_EXPORT_METHOD(markViewAsSensitiveInformation: (NSArray *) views){
+    [[Auryc mainInstance] markViewAsSensitiveInformation: views];
+}
+
+RCT_EXPORT_METHOD(unMarkViewAsSensitiveInformation: (NSArray *) views){
+    [[Auryc mainInstance] unMarkViewAsSensitiveInformation: views];
+}
+
+RCT_EXPORT_METHOD(markScreenAsSensitive: (BOOL) visible){
+    [[Auryc mainInstance] markScreenAsSensitive: visible];
+}
+
 @end
   
