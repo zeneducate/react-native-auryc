@@ -18,10 +18,13 @@ import auryc.com.Auryc;
 public class RNAurycModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
+  private Application mApplication = null;
 
-  public RNAurycModule(ReactApplicationContext reactContext) {
+
+  public RNAurycModule(ReactApplicationContext reactContext, Application application) {
     super(reactContext);
     this.reactContext = reactContext;
+    this.mApplication = application;
   }
 
   @Override
@@ -30,8 +33,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public static final void initialize(final Application app) {
-    Auryc.initialize(app);
+  public final void initialize() {
+    Auryc.initialize(this.mApplication);
   }
 
   @ReactMethod

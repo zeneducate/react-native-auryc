@@ -11,9 +11,16 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 public class RNAurycPackage implements ReactPackage {
+
+    private Application mApplication = null;
+
+    public RNAurycPackage(Application application) {
+        mApplication = application;
+    }
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNAurycModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNAurycModule(reactContext, this.mApplication));
     }
 
     // Deprecated from RN 0.47
