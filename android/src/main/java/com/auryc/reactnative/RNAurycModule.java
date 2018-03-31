@@ -33,7 +33,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public final void initialize() {
+  public final void initialize(final String apiKey, final String siteId) {
+    // apiKey and siteId are added for consistency with ios sdk.
     Auryc.initialize(this.mApplication);
   }
 
