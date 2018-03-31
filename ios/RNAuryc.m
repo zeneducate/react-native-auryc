@@ -6,6 +6,14 @@
 
 RCT_EXPORT_MODULE(RNAuryc)
 
+- (dispatch_queue_t)methodQueue {
+ return dispatch_get_main_queue();
+}
+
+RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
+    [Auryc initialize: apiKey siteId: siteId];
+}
+
 RCT_EXPORT_METHOD(identify: (NSString *) identity){
     [[Auryc mainInstance] identify: identity];
 }
