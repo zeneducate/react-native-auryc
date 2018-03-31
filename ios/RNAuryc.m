@@ -11,8 +11,8 @@ RCT_EXPORT_MODULE(RNAuryc)
 }
 
 // TODO: hide it in public build
-RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId isDev: (BOOL) isDev){
-    [Auryc initialize: apiKey siteId: siteId isDev: isDev];
+RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
+    [Auryc initialize: apiKey siteId: siteId isDev: false];
 }
 
 RCT_EXPORT_METHOD(identify: (NSString *) identity){
