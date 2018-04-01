@@ -210,6 +210,8 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../ios/Pods/Auryc/Auryc.framework/Headers/**",
 					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(SRCROOT)/../../../ios/build/Products/Debug-iphoneos/Auryc/Auryc.framework/Headers/**",
+					"$(SRCROOT)/../../../ios/build/Products/Debug-iphonesimulator/Auryc/Auryc.framework/Headers",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -228,6 +230,8 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../ios/Pods/**",
 					"$(SRCROOT)/../../../ios/Pods/Auryc/Auryc.framework/Headers/**",
+					"$(SRCROOT)/../../../ios/build/Products/Release-iphoneos/Auryc/Auryc.framework/Headers",
+					"$(SRCROOT)/../../../ios/build/Products/Release-iphonesimulator/Auryc/Auryc.framework/Headers",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
