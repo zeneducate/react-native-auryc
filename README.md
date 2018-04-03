@@ -20,7 +20,11 @@
   ```
   "react-native-auryc": "git+ssh://git@github.com/auryc-dev-partner/react-native-auryc.git"
   ```  
-
+  If you use https:
+  ```
+  "react-native-auryc": "https://github.com/auryc-dev-partner/react-native-auryc.git"
+  ```  
+  
   ```
   npm install react-native-auryc --save
   react-native link react-native-auryc
