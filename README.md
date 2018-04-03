@@ -88,8 +88,14 @@ npm install react-native-auryc --save
 react-native link react-native-auryc
 ```
 
+3. Open MainApplication.java and change
+`new RNAurycPackage()`
+to
+`
+new RNAurycPackage(this.getApplication())
+`
 
-3. Call the following method when your app starts (when your root component loads):
+4. Call the following method when your app starts (when your root component loads):
 ```javascript
 import Auryc from 'react-native-auryc';
 
