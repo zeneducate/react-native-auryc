@@ -110,9 +110,11 @@ Auryc.identify('abc@example.com')
 Auryc.addUserProperties({'company': 'Example Inc'});
 ...
 ```
-## Notes
+## Other notes
 ### Android integration
-React-Native uses Android SDK version 23 which might introduce conflicts when newer version of SDK is used in your project.
+1. Use gradle version 4+
+
+2. React-Native uses Android SDK version 23 which might introduce conflicts when newer version of SDK is used in your project.
 Consider adding the following block to build.gradle to resolve this.
 ```Java
 subprojects {
@@ -126,3 +128,13 @@ subprojects {
     }
 }
 ```
+
+### iOS
+If you run into issues regarding 
+```
+Print: Entry, “:CFBundleIdentifier”, Does Not Exist
+
+```
+
+follow the answers here: https://stackoverflow.com/a/41854111
+  
