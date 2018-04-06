@@ -16,15 +16,6 @@
 
 2. Go to the root level and add the Auryc bridge to your project
 
-  Before react-native-auryc is published to the public NPM repository, the following line needed to added to package.json
-  ```
-  "react-native-auryc": "git+ssh://git@github.com/auryc-dev-partner/react-native-auryc.git"
-  ```  
-  If you use https:
-  ```
-  "react-native-auryc": "https://github.com/auryc-dev-partner/react-native-auryc.git"
-  ```  
-  
   ```
   npm install react-native-auryc --save
   react-native link react-native-auryc
