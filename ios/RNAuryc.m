@@ -1,6 +1,6 @@
 
 #import "RNAuryc.h"
-#import <Auryc-Swift.h>
+#import <AurycSDK/Auryc.h>
 
 @implementation RNAuryc
 
@@ -11,7 +11,7 @@ RCT_EXPORT_MODULE(RNAuryc)
 }
 
 RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
-    [Auryc initializeRN: apiKey siteId: siteId];
+    [Auryc initialize:apiKey siteId:siteId];
 }
 
 RCT_EXPORT_METHOD(identify: (NSString *) identity){
@@ -31,12 +31,14 @@ RCT_EXPORT_METHOD(track: (NSString *) eventName properties: (NSDictionary *) pro
 }
 
 RCT_EXPORT_METHOD(markALLTextFieldsAsSensitiveInformation: (BOOL) visible){
-    [[Auryc mainInstance] markALLTextFieldsAsSensitiveInformation: visible];
+    if (!visible) {
+        [[Auryc mainInstance] marksAllTextFieldsAsSensitiveInformation];
+    }
 }
 
-RCT_EXPORT_METHOD(markScreenAsSensitive: (BOOL) visible){
-    [[Auryc mainInstance] markScreenAsSensitive: visible];
-}
+//RCT_EXPORT_METHOD(markScreenAsSensitive: (BOOL) visible){
+//    [[Auryc mainInstance] markScreenAsSensitive: visible];
+//}
 
 @end
   
