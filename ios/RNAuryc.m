@@ -4,10 +4,10 @@
 
 @implementation RNAuryc
 
-RCT_EXPORT_MODULE(RNAuryc)
+RCT_EXPORT_MODULE()
 
-- (dispatch_queue_t)methodQueue {
- return dispatch_get_main_queue();
+RCT_EXPORT_METHOD(initialize) {
+    
 }
 
 RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
@@ -30,15 +30,6 @@ RCT_EXPORT_METHOD(track: (NSString *) eventName properties: (NSDictionary *) pro
     [[Auryc mainInstance] track: eventName properties: properties];
 }
 
-RCT_EXPORT_METHOD(markALLTextFieldsAsSensitiveInformation: (BOOL) visible){
-    if (!visible) {
-        [[Auryc mainInstance] marksAllTextFieldsAsSensitiveInformation];
-    }
-}
-
-//RCT_EXPORT_METHOD(markScreenAsSensitive: (BOOL) visible){
-//    [[Auryc mainInstance] markScreenAsSensitive: visible];
-//}
 
 @end
   
