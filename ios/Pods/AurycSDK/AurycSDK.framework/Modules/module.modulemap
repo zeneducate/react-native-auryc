@@ -1,6 +1,0 @@
-framework module AurycSDK {
-  umbrella header "AurycSDK.h"
-
-  export *
-  module * { export * }
-}

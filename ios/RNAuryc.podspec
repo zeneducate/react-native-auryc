@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "AurycSDK"
+  # s.dependency "AurycSDK"
 
 end

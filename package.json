@@ -1,7 +1,6 @@
-
 {
-  "name": "react-native-auryc",
-  "version": "1.0.0",
+  "name": "rn-auryc-sdk",
+  "version": "0.0.1",
   "description": "React native bridge library for Auryc SDK",
   "main": "index.js",
   "scripts": {
@@ -10,11 +9,17 @@
   "keywords": [
     "react-native"
   ],
-  "author": {
-    "name": "Auryc Inc."
-  },
-  "license": "Copyright (c) 2018, The Auryc SDK is a copyrighted work belonging to Auryc. \n We or our suppliers exclusively own the information and content made available on or through the Site (other than information or content You provide) and the information and content in any communications Auryc sends You (collectively, “SDK”). You may use the SDK only in accordance with this Agreement. Subject to the terms and conditions of this Agreement (including Your compliance with this Agreement), Auryc grants You a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to view and use the Auryc SDK (other than Software (defined in Section 4 of our Terms of Service) which is licensed only under the terms of Section 4 of our Terms of Service) for Your personal or internal business purposes. You may not use the Auryc SDK except as expressly authorized under this Agreement. You agree that any copy of the Auryc SDK that You make shall retain all copyright and other proprietary notices in the same form and manner as on the original. Except as expressly authorized under this Agreement or to the extent otherwise permitted under applicable law, You may not use, download, upload, print, display, perform, reproduce, publish, license, post, transmit, modify, create derivative works of, reverse engineer, disassemble, decompile, adapt, distribute, transfer, or exploit any Auryc SDK in whole or in part without Our prior written authorization.",
+  "author": "Auryc Inc.",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": ">0.41.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auryc-inc/react-native-auryc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/auryc-inc/react-native-auryc/issues"
+  },
+  "homepage": "https://github.com/auryc-inc/react-native-auryc#readme"
 }
