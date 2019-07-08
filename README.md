@@ -6,7 +6,7 @@
 
     1.1 Add Auryc to your podfile
     ```
-    pod 'Auryc'
+    pod 'AurycSDK'
     ```
     1.2 Run the following commands
     ```
@@ -17,23 +17,23 @@
 2. Go to the root level and add the Auryc bridge to your project
 
   ```
-  npm install react-native-auryc --save
-  react-native link react-native-auryc
+  npm install rn-auryc-sdk --save
+  react-native link rn-auryc-sdk
   ```
 
 3. Call the following method when your app starts (when your root component loads):
 ```javascript
-import Auryc from 'react-native-auryc';
+import RNAuryc from 'rn-auryc-sdk';
 
 componentDidMount () {
-  Auryc.initialize(YOUR_SITE_TOKEN, YOUR_SITE_ID);
+  RNAuryc.initialize({YOUR_SITE_TOKEN}, {YOUR_SITE_ID});
 }
 ```
 
 4. (Optional) Call the available APIs. Please refer to your portal instructions for the complete list of APIs.
 ```javascript
-Auryc.identify('abc@example.com')
-Auryc.addUserProperties({'company': 'Example Inc'});
+RNAuryc.identify("abc@example.com");
+RNAuryc.addUserProperties({'company': 'Example Inc'});
 ...
 ```
 
@@ -131,11 +131,10 @@ subprojects {
 ```
 
 ### iOS
-If you run into issues regarding 
+If you run into issues regarding
 ```
 Print: Entry, “:CFBundleIdentifier”, Does Not Exist
 
 ```
 
 follow the answers here: https://stackoverflow.com/a/41854111
-  
