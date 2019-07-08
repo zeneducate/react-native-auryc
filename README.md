@@ -1,5 +1,5 @@
 
-# react-native-auryc
+# rn-auryc-sdk
 
 ## iOS
 1. Go to ./ios folder in your react native project and do the followings
