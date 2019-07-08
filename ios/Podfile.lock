@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AurycSDK (0.1.11):
+  - AurycSDK (0.1.14):
     - AFNetworking
     - CocoaLumberjack
     - DeviceUtil
@@ -49,7 +49,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AurycSDK: d0e7821fd4b70e6432139f05a68b0b2549f14c76
+  AurycSDK: bd4d85ad1f2f109504680f567dfd7cd72631bef4
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   DeviceUtil: e8de8005f896a082dbb39cfc7ffe11e2f8d218a3
@@ -57,6 +57,6 @@ SPEC CHECKSUMS:
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
   React: ab1a2e21deb34965c38328d5ec40cc7d12c6050a
 
-PODFILE CHECKSUM: bd61c36706ce0faf618f281fa1410b3ad3e6f360
+PODFILE CHECKSUM: af26859934624c8e1737ac4c383c93370b071f0f
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.3

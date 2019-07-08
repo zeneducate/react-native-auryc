@@ -30,6 +30,8 @@ extern NSString *aurycSDKVersionString(void);
 - (void)track:(NSString *)key properties:(NSDictionary *)properties;
 
 // masking
+- (void)markScreenAsSensitiveInformation;
+- (void)unMarkScreenAsSensitiveInformation;
 - (void)markViewAsSensitiveInformation:(UIView *)view;
 - (void)unMarkViewAsSensitiveInformation:(UIView *)view;
 - (void)markViewsAsSensitiveInformation:(NSArray<UIView *> *)views;

@@ -41,5 +41,13 @@ RCT_EXPORT_METHOD(markViewsAsSensitiveInformation:(NSArray<UIView *> *)views) {
 RCT_EXPORT_METHOD(unMarkViewsAsSensitiveInformation:(NSArray<UIView *> *)views) {
     [[Auryc mainInstance] unMarkViewsAsSensitiveInformation:views];
 }
+
+RCT_EXPORT_METHOD(markScreenAsSensitiveInformation) {
+    [[Auryc mainInstance] markScreenAsSensitiveInformation];
+}
+
+RCT_EXPORT_METHOD(unMarkScreenAsSensitiveInformation) {
+    [[Auryc mainInstance] unMarkScreenAsSensitiveInformation];
+}
 @end
   
