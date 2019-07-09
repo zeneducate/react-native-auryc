@@ -1,25 +1,51 @@
 'use strict';
 var { Platform, NativeModules, findNodeHandle, InteractionManager } = require('react-native');
-var AurycBridge = NativeModules.RNAuryc;
+var RNAurycBridge = NativeModules.RNAuryc;
 
 class RNAuryc {
 
+    static initialize(token, siteId) {
+        RNAurycBridge.initialize(token, siteId);
+    }
+
+    static identify(identity) {
+        RNAurycBridge.identify(identity);
+    }
+
+    static addUserProperties(userProperties) {
+        RNAurycBridge.addUserProperties(userProperties);
+    }
+
+    static addSessionProperties(properties) {
+        RNAurycBridge.addSessionProperties(properties);
+    }
+
+    static track(eventName, properties) {
+        RNAurycBridge.track(eventName, properties);
+    }
+
     static markViewAsSensitiveInformation(ref) {
         if (ref == null) {
-            console.log('Auryc : Can\'t mark a null ref as sensitive (are you sure the component has a ref?)');
             return;
         }
 
-        AurycBridge.markViewAsSensitiveInformation(findNodeHandle(ref));
+        RNAurycBridge.markViewAsSensitiveInformation(findNodeHandle(ref));
     }
 
     static unMarkViewAsSensitiveInformation(ref) {
         if (ref == null) {
-            console.log('Auryc : Can\'t unmark a null ref as sensitive (are you sure the component has a ref?)');
             return;
         }
 
-        AurycBridge.unMarkViewAsSensitiveInformation(findNodeHandle(ref));
+        RNAurycBridge.unMarkViewAsSensitiveInformation(findNodeHandle(ref));
+    }
+
+    static markScreenAsSensitiveInformation() {
+        RNAurycBridge.markScreenAsSensitiveInformation();
+    }
+
+    static unMarkScreenAsSensitiveInformation() {
+        RNAurycBridge.unMarkScreenAsSensitiveInformation();
     }
 }
 module.exports = RNAuryc;
