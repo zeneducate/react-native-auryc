@@ -3,6 +3,7 @@
 #import <AurycSDK/Auryc.h>
 
 @implementation RNAuryc
+@synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE()
 
