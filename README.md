@@ -23,17 +23,21 @@
 
 3. Call the following method when your app starts (when your root component loads):
 ```javascript
-import RNAuryc from 'rn-auryc-sdk';
-
 componentDidMount () {
-  RNAuryc.initialize({YOUR_SITE_TOKEN}, {YOUR_SITE_ID});
+  var Auryc = require('rn-auryc-sdk');
+  Auryc.initialize({YOUR_SITE_TOKEN}, {YOUR_SITE_ID});
 }
 ```
 
 4. (Optional) Call the available APIs. Please refer to your portal instructions for the complete list of APIs.
 ```javascript
-RNAuryc.identify("abc@example.com");
-RNAuryc.addUserProperties({'company': 'Example Inc'});
+var Auryc = require('rn-auryc-sdk');
+Auryc.identify("abc@example.com");
+Auryc.track("Event name", {"property key" : "property value"});
+Auryc.addSessionProperties({"property key" : "property value"});
+Auryc.addUserProperties({'company': 'Example Inc'});
+
+<View ref={ x => Auryc.markViewAsSensitiveInformation(x) }>
 ...
 ```
 
