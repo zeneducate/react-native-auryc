@@ -1,6 +1,2 @@
-
-import { NativeModules } from 'react-native';
-
-const { RNAuryc } = NativeModules;
-
-export default RNAuryc;
+'use strict';
+module.exports = require('./RNAuryc');
