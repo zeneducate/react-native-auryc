@@ -26,20 +26,18 @@ RCT_EXPORT_METHOD(track: (NSString *) eventName properties:(NSDictionary *)prope
     [[Auryc mainInstance] track:eventName properties:properties];
 }
 
-RCT_EXPORT_METHOD(markViewAsSensitiveInformation:(UIView *)view) {
-    [[Auryc mainInstance] markViewAsSensitiveInformation:view];
+RCT_EXPORT_METHOD(markViewAsSensitiveInformation:(nonnull NSNumber *)tag) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *view = [self.bridge.uiManager viewForReactTag:tag];
+        [[Auryc mainInstance] markViewAsSensitiveInformation:view];
+    });
 }
 
-RCT_EXPORT_METHOD(unMarkViewAsSensitiveInformation:(UIView *)view) {
-    [[Auryc mainInstance] unMarkViewAsSensitiveInformation:view];
-}
-
-RCT_EXPORT_METHOD(markViewsAsSensitiveInformation:(NSArray<UIView *> *)views) {
-    [[Auryc mainInstance] markViewsAsSensitiveInformation:views];
-}
-
-RCT_EXPORT_METHOD(unMarkViewsAsSensitiveInformation:(NSArray<UIView *> *)views) {
-    [[Auryc mainInstance] unMarkViewsAsSensitiveInformation:views];
+RCT_EXPORT_METHOD(unMarkViewAsSensitiveInformation:(nonnull NSNumber *)tag) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *view = [self.bridge.uiManager viewForReactTag:tag];
+        [[Auryc mainInstance] unMarkViewAsSensitiveInformation:view];
+    });
 }
 
 RCT_EXPORT_METHOD(markScreenAsSensitiveInformation) {

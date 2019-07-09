@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNAuryc"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "RNAuryc"
   s.description  = <<-DESC
                   RNAuryc
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/author/RNAuryc.git", :branch => "Dev" }
+  s.source       = { :git => "https://github.com/author/RNAuryc.git", :branch => "master" }
   # s.source       = { :path => '.' }
   s.source_files  = "RNAuryc.{h,m}"
   s.requires_arc = true
