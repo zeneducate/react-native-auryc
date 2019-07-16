@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B8E0C22D492D10057ADE9 /* React.framework */; };
 		895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */,
 				895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
