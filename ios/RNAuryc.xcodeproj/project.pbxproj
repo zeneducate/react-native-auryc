@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B8E0C22D492D10057ADE9 /* React.framework */; };
 		895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.debug.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libRNAuryc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAuryc.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D3B8E0C22D492D10057ADE9 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNAuryc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.release.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAuryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAuryc.h; sourceTree = "<group>"; };
@@ -39,7 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */,
 				895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +55,6 @@
 		27104A7050E30528DD391814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D3B8E0C22D492D10057ADE9 /* React.framework */,
 				4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */,
 			);
 			name = Frameworks;
