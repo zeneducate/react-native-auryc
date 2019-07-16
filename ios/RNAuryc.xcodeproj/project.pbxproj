@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B8E0C22D492D10057ADE9 /* React.framework */; };
+		895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.debug.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libRNAuryc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAuryc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3B8E0C22D492D10057ADE9 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNAuryc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.release.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAuryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAuryc.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNAuryc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAuryc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */,
+				895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +58,19 @@
 		27104A7050E30528DD391814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D3B8E0C22D492D10057ADE9 /* React.framework */,
+				4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A27A7A96835DB10E34F647A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */,
+				9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		58B511D21A9E6C8500147676 = {
@@ -60,6 +79,7 @@
 				B3E7B5881CC2AC0600A0062D /* RNAuryc.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAuryc.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				4A27A7A96835DB10E34F647A /* Pods */,
 				27104A7050E30528DD391814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAuryc" */;
 			buildPhases = (
+				6053189A238715AACF64B6C0 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -115,6 +136,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6053189A238715AACF64B6C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNAuryc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -211,6 +257,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -231,6 +278,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

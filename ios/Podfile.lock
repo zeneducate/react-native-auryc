@@ -28,9 +28,13 @@ PODS:
   - JWT (2.2.0):
     - Base64 (~> 1.1.2)
   - Protobuf (3.8.0)
+  - React (0.11.0):
+    - React/Core (= 0.11.0)
+  - React/Core (0.11.0)
 
 DEPENDENCIES:
   - AurycSDK
+  - React
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,6 +45,7 @@ SPEC REPOS:
     - DeviceUtil
     - JWT
     - Protobuf
+    - React
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -50,7 +55,8 @@ SPEC CHECKSUMS:
   DeviceUtil: e8de8005f896a082dbb39cfc7ffe11e2f8d218a3
   JWT: cf73c0ab0dac762df3de8a3f1164352089d97780
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
+  React: ab1a2e21deb34965c38328d5ec40cc7d12c6050a
 
-PODFILE CHECKSUM: 078224ca5d5bc2ac02a1e1dfa403f6bff22fa82a
+PODFILE CHECKSUM: af26859934624c8e1737ac4c383c93370b071f0f
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.7.3
