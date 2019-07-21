@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B8E0C22D492D10057ADE9 /* React.framework */; };
 		1DF5468F22E4C2DE00F2DFBD /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
-		895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */; };
+		1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNAuryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DF5479C22E4CAA300F2DFBD /* Auryc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DF546EF22E4C7BB00F2DFBD /* Auryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DF5479D22E4CAC500F2DFBD /* AurycSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3B8E0D22D492D10057ADE9 /* React.framework in Frameworks */,
 				1DF5468F22E4C2DE00F2DFBD /* AurycSDK.framework in Frameworks */,
-				895938BB752CE53C1844742C /* Pods_RNAuryc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +91,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1DF5479A22E4CA9D00F2DFBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */,
+				1DF5479C22E4CAA300F2DFBD /* Auryc.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		58B511DA1A9E6C8500147676 /* RNAuryc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAuryc" */;
 			buildPhases = (
-				6053189A238715AACF64B6C0 /* [CP] Check Pods Manifest.lock */,
+				1DF5479A22E4CA9D00F2DFBD /* Headers */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -143,36 +154,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6053189A238715AACF64B6C0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNAuryc-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF5479D22E4CAC500F2DFBD /* AurycSDK.framework in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
