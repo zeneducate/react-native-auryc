@@ -6,8 +6,8 @@ target 'RNAuryc' do
   use_frameworks!
 
   # Pods for RNAuryc
-  pod 'React'
-  pod 'AurycSDK'
+#  pod 'React'
+#  pod 'AurycSDK'
 
   #  pod 'RNAuryc', :path => '/Users/alcides.zelaya/Documents/Auryc/react-native-auryc/ios'
 end
