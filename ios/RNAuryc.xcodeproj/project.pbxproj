@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D3BBE5922E5B6E8001FD7A8 /* Auryc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */; };
-		1D3BBEB022E5BC8E001FD7A8 /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */; };
+		1D3BBF7322E5C926001FD7A8 /* libAurycSDK.a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3BBF7222E5C926001FD7A8 /* libAurycSDK.a.a */; };
 		1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNAuryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
@@ -30,7 +30,7 @@
 		134814201AA4EA6300B7C361 /* libRNAuryc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAuryc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3B8E0C22D492D10057ADE9 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Auryc.h; sourceTree = "<group>"; };
-		1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AurycSDK.framework; sourceTree = "<group>"; };
+		1D3BBF7222E5C926001FD7A8 /* libAurycSDK.a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAurycSDK.a.a; sourceTree = "<group>"; };
 		4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNAuryc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.release.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAuryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAuryc.h; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3BBEB022E5BC8E001FD7A8 /* AurycSDK.framework in Frameworks */,
+				1D3BBF7322E5C926001FD7A8 /* libAurycSDK.a.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 				B3E7B5881CC2AC0600A0062D /* RNAuryc.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAuryc.m */,
 				1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */,
-				1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */,
+				1D3BBF7222E5C926001FD7A8 /* libAurycSDK.a.a */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				4A27A7A96835DB10E34F647A /* Pods */,
 				27104A7050E30528DD391814 /* Frameworks */,
@@ -111,6 +111,7 @@
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
+				1D3BBEF822E5C193001FD7A8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +153,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D3BBEF822E5C193001FD7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -204,7 +215,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -241,6 +252,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -250,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -264,10 +277,14 @@
 					"$(SRCROOT)/../../../ios/build/Products/Debug-iphoneos/Auryc/Auryc.framework/Headers/**",
 					"$(SRCROOT)/../../../ios/build/Products/Debug-iphonesimulator/Auryc/Auryc.framework/Headers",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNAuryc;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -275,6 +292,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -289,10 +308,14 @@
 					"$(SRCROOT)/../../../ios/build/Products/Release-iphoneos/Auryc/Auryc.framework/Headers",
 					"$(SRCROOT)/../../../ios/build/Products/Release-iphonesimulator/Auryc/Auryc.framework/Headers",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNAuryc;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
