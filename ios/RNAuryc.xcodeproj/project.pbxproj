@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3BBE5922E5B6E8001FD7A8 /* Auryc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */; };
 		1DF5468F22E4C2DE00F2DFBD /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
 		1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNAuryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DF5479C22E4CAA300F2DFBD /* Auryc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DF546EF22E4C7BB00F2DFBD /* Auryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DF5479D22E4CAC500F2DFBD /* AurycSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +29,8 @@
 		0F0BB1388586B9B3BACF3C2A /* Pods-RNAuryc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.debug.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.debug.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libRNAuryc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAuryc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3B8E0C22D492D10057ADE9 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Auryc.h; sourceTree = "<group>"; };
 		1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AurycSDK.framework; sourceTree = "<group>"; };
-		1DF546EF22E4C7BB00F2DFBD /* Auryc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Auryc.h; path = AurycSDK.framework/Headers/Auryc.h; sourceTree = "<group>"; };
 		4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNAuryc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.release.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAuryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAuryc.h; sourceTree = "<group>"; };
@@ -81,7 +80,7 @@
 			children = (
 				B3E7B5881CC2AC0600A0062D /* RNAuryc.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAuryc.m */,
-				1DF546EF22E4C7BB00F2DFBD /* Auryc.h */,
+				1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */,
 				1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				4A27A7A96835DB10E34F647A /* Pods */,
@@ -97,7 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */,
-				1DF5479C22E4CAA300F2DFBD /* Auryc.h in Headers */,
+				1D3BBE5922E5B6E8001FD7A8 /* Auryc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF5479D22E4CAC500F2DFBD /* AurycSDK.framework in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
