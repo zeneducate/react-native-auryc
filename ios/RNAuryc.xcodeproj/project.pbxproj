@@ -8,22 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1D3BBE5922E5B6E8001FD7A8 /* Auryc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */; };
-		1D3BBE7F22E5BA25001FD7A8 /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
-		1D3BBE8022E5BA2C001FD7A8 /* AurycSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
-		1DF5468F22E4C2DE00F2DFBD /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */; };
+		1D3BBEB022E5BC8E001FD7A8 /* AurycSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */; };
 		1DF5479B22E4CAA300F2DFBD /* RNAuryc.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNAuryc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E7B58A1CC2AC0600A0062D /* RNAuryc.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAuryc.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1D3BBE7D22E5B9AE001FD7A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 58B511D31A9E6C8500147676 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D3BBE7522E5B91F001FD7A8;
-			remoteInfo = AurycSDK;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -42,9 +30,7 @@
 		134814201AA4EA6300B7C361 /* libRNAuryc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAuryc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3B8E0C22D492D10057ADE9 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Auryc.h; sourceTree = "<group>"; };
-		1D3BBE7622E5B91F001FD7A8 /* AurycSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AurycSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D3BBE7822E5B91F001FD7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AurycSDK.framework; sourceTree = "<group>"; };
+		1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AurycSDK.framework; sourceTree = "<group>"; };
 		4E31CD4CA701B09EAFBF6C53 /* Pods_RNAuryc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNAuryc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B90FDCA974CB610CDF0F9EB /* Pods-RNAuryc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAuryc.release.xcconfig"; path = "Target Support Files/Pods-RNAuryc/Pods-RNAuryc.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAuryc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAuryc.h; sourceTree = "<group>"; };
@@ -52,19 +38,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D3BBE7322E5B91F001FD7A8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D3BBE7F22E5BA25001FD7A8 /* AurycSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF5468F22E4C2DE00F2DFBD /* AurycSDK.framework in Frameworks */,
+				1D3BBEB022E5BC8E001FD7A8 /* AurycSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,15 +55,6 @@
 				134814201AA4EA6300B7C361 /* libRNAuryc.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1D3BBE7722E5B91F001FD7A8 /* AurycSDK */ = {
-			isa = PBXGroup;
-			children = (
-				1D3BBE7822E5B91F001FD7A8 /* Info.plist */,
-				1DF5468E22E4C2DE00F2DFBD /* AurycSDK.framework */,
-			);
-			path = AurycSDK;
 			sourceTree = "<group>";
 		};
 		27104A7050E30528DD391814 /* Frameworks */ = {
@@ -112,11 +81,10 @@
 				B3E7B5881CC2AC0600A0062D /* RNAuryc.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAuryc.m */,
 				1D3BBE5822E5B6E8001FD7A8 /* Auryc.h */,
-				1D3BBE7722E5B91F001FD7A8 /* AurycSDK */,
+				1D3BBEAF22E5BC8E001FD7A8 /* AurycSDK.framework */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				4A27A7A96835DB10E34F647A /* Pods */,
 				27104A7050E30528DD391814 /* Frameworks */,
-				1D3BBE7622E5B91F001FD7A8 /* AurycSDK.bundle */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,23 +103,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1D3BBE7522E5B91F001FD7A8 /* AurycSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D3BBE7922E5B91F001FD7A8 /* Build configuration list for PBXNativeTarget "AurycSDK" */;
-			buildPhases = (
-				1D3BBE7222E5B91F001FD7A8 /* Sources */,
-				1D3BBE7322E5B91F001FD7A8 /* Frameworks */,
-				1D3BBE7422E5B91F001FD7A8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AurycSDK;
-			productName = AurycSDK;
-			productReference = 1D3BBE7622E5B91F001FD7A8 /* AurycSDK.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		58B511DA1A9E6C8500147676 /* RNAuryc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNAuryc" */;
@@ -164,7 +115,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1D3BBE7E22E5B9AE001FD7A8 /* PBXTargetDependency */,
 			);
 			name = RNAuryc;
 			productName = RCTDataManager;
@@ -180,11 +130,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					1D3BBE7522E5B91F001FD7A8 = {
-						CreatedOnToolsVersion = 10.2.1;
-						DevelopmentTeam = P32QP58Q85;
-						ProvisioningStyle = Automatic;
-					};
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -204,30 +149,11 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNAuryc */,
-				1D3BBE7522E5B91F001FD7A8 /* AurycSDK */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1D3BBE7422E5B91F001FD7A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1D3BBE7222E5B91F001FD7A8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D3BBE8022E5BA2C001FD7A8 /* AurycSDK.framework in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,97 +164,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1D3BBE7E22E5B9AE001FD7A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D3BBE7522E5B91F001FD7A8 /* AurycSDK */;
-			targetProxy = 1D3BBE7D22E5B9AE001FD7A8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1D3BBE7A22E5B91F001FD7A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = P32QP58Q85;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AurycSDK",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AurycSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.auryc.ios.AurycSDK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		1D3BBE7B22E5B91F001FD7A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = P32QP58Q85;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AurycSDK",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AurycSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.auryc.ios.AurycSDK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		58B511ED1A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,15 +299,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D3BBE7922E5B91F001FD7A8 /* Build configuration list for PBXNativeTarget "AurycSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D3BBE7A22E5B91F001FD7A8 /* Debug */,
-				1D3BBE7B22E5B91F001FD7A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNAuryc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
