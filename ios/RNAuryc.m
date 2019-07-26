@@ -7,8 +7,12 @@
 
 RCT_EXPORT_MODULE()
 
+RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId development:(BOOL)development ){
+    [Auryc initialize:apiKey siteId:siteId development:development];
+}
+
 RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
-    [Auryc initialize:apiKey siteId:siteId development:YES];
+    [Auryc initialize:apiKey siteId:siteId];
 }
 
 RCT_EXPORT_METHOD(identify:(NSString *)identity){
