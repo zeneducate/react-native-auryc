@@ -37,10 +37,10 @@ extern NSString *aurycSDKVersionString(void);
 - (void)markViewsAsSensitiveInformation:(NSArray<UIView *> *)views;
 - (void)unMarkViewsAsSensitiveInformation:(NSArray<UIView *> *)views;
 
-// feedback
-- (void)showFeedback;                                                                               // shows feedback in key window's root view controller; animated = true
-- (void)showFeedbackInViewController:(UIViewController *)viewController;                            // shows feedback in passed view controller; animated = true
-- (void)showFeedbackInViewController:(UIViewController *)viewController animated:(BOOL)animated;    // shows feedback in passed view controller allowing 'animated' to be set
+//// feedback
+//- (void)showFeedback;                                                                               // shows feedback in key window's root view controller; animated = true
+//- (void)showFeedbackInViewController:(UIViewController *)viewController;                            // shows feedback in passed view controller; animated = true
+//- (void)showFeedbackInViewController:(UIViewController *)viewController animated:(BOOL)animated;    // shows feedback in passed view controller allowing 'animated' to be set
 @end
 
 NS_ASSUME_NONNULL_END
