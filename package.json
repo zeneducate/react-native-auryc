@@ -1,6 +1,6 @@
 {
   "name": "rn-auryc-sdk",
-  "version": "0.1.32",
+  "version": "1.0.0",
   "description": "React native bridge library for Auryc SDK",
   "main": "index.js",
   "scripts": {
