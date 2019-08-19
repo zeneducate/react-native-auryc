@@ -11,8 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *aurycSDKVersionString(void);
-
 @interface Auryc : NSObject
 @property (readonly) BOOL initialized;
 @property (nonatomic) BOOL debugMode;
@@ -22,6 +20,7 @@ extern NSString *aurycSDKVersionString(void);
 + (void)initialize:(NSString *)token siteId:(NSString *)siteId development:(BOOL)dev;
 
 + (Auryc *)mainInstance;
++ (NSString *)aurycSDKVersionString;
 
 - (void)addSessionProperties:(NSDictionary<NSString *, NSObject *> *)properties;
 - (void)addUserProperties:(NSDictionary<NSString *, NSObject *> *)properties;
