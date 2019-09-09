@@ -13,9 +13,9 @@
 ### for projects using Cocoapods
 2. Go to ./ios folder in your react native project and do the followings
 
-    1.1 Add Auryc to your podfile
+    1.1 make sure the following line is added to your Podfile
     ```
-    pod 'AurycSDK'
+    pod 'rn-auryc-sdk', :path => '../node_modules/rn-auryc-sdk'
     ```
     1.2 Run the following commands
     ```
