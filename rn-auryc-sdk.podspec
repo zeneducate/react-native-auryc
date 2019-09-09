@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "rn-auryc-sdk"
-  s.version      = "0.0.10"
+  s.version      = "1.0.0"
   s.summary      = "RNAuryc"
   s.description  = <<-DESC
                   RNAuryc
