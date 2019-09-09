@@ -56,7 +56,9 @@ Auryc.addUserProperties({'company': 'Example Inc'});
 ```
 
 ### Other Notes iOS
-If you run into issues regarding
+1. RNAuryc currently requires the compiler to be ‘Objective-C’ or ‘Objective-C++’ in XCode.
+
+2. If you run into issues regarding
 ```
 Print: Entry, “:CFBundleIdentifier”, Does Not Exist
 
