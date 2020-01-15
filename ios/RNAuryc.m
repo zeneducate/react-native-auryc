@@ -54,7 +54,9 @@ RCT_EXPORT_METHOD(unMarkScreenAsSensitiveInformation) {
 }
 
 RCT_EXPORT_METHOD(showFeedback:(NSString *)feedbackID) {
-    [[Auryc mainInstance] showFeedback:feedbackID];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[Auryc mainInstance] showFeedback:feedbackID];
+    });
 }
 @end
   
