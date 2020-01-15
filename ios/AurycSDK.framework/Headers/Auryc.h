@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) BOOL initialized;
 @property (nonatomic) BOOL debugMode;
 @property (nonatomic, assign) BOOL marksAllTextFieldsAsSensitiveInformation;                        // default : YES
+@property (readonly, nonatomic) BOOL isShowingFeedback;
 
 + (void)initialize:(NSString *)token siteId:(NSString *)siteId;                                     // default initializer for production environment
 + (void)initialize:(NSString *)token siteId:(NSString *)siteId development:(BOOL)dev;
@@ -36,6 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)markViewsAsSensitiveInformation:(NSArray<UIView *> *)views;
 - (void)unMarkViewsAsSensitiveInformation:(NSArray<UIView *> *)views;
 
+// Event Marker
+- (void)startEventMarker;
+- (void)stopEventMarker;
+
+// Feedback
+- (void)showFeedback:(NSString *)feedbackID;                                                                               // shows feedback in key window's root view controller; animated = true
+- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController;                            // shows feedback in passed view controller; animated = true
+- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController animated:(BOOL)animated;    // shows feedback in passed view controller allowing 'animated' to be set
 @end
 
 NS_ASSUME_NONNULL_END

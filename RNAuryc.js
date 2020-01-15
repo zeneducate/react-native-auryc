@@ -51,5 +51,9 @@ class RNAuryc {
     static unMarkScreenAsSensitiveInformation() {
         RNAurycBridge.unMarkScreenAsSensitiveInformation();
     }
+
+    static showFeedback(feedbackId) {
+        RNAurycBridge.showFeedback(feedbackId);
+    }
 }
 module.exports = RNAuryc;
