@@ -58,5 +58,9 @@ RCT_EXPORT_METHOD(showFeedback:(NSString *)feedbackID) {
         [[Auryc mainInstance] showFeedback:feedbackID];
     });
 }
+
+RCT_EXPORT_METHOD(disable) {
+    [Auryc disable];
+}
 @end
   
