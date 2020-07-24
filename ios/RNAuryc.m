@@ -14,21 +14,20 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(initialize: (NSString *) apiKey siteId: (NSString *)siteId){
-  [Auryc initialize:apiKey siteId:siteId];
+RCT_EXPORT_METHOD(initialize: (NSString *) token siteId: (NSString *)siteId){
+  [Auryc initialize:token siteId:siteId];
 }
 
 RCT_EXPORT_METHOD(initializeWithUser:(NSString *)token siteId:(NSString *)siteId userId:(NSString *)userId){
-  [Auryc initialize:siteId siteId:siteId userId:userId];
+  [Auryc initialize:token siteId:siteId userId:userId];
 }
 
-
 RCT_EXPORT_METHOD(initializeDev:(NSString *)token siteId:(NSString *)siteId development:(BOOL)dev){
-  [Auryc initialize:siteId siteId:siteId development:dev];
+  [Auryc initialize:token siteId:siteId development:dev];
 }
 
 RCT_EXPORT_METHOD(initializeDevWithUser:(NSString *)token siteId:(NSString *)siteId userId:(NSString *)userId development:(BOOL)dev){
-  [Auryc initialize:siteId siteId:siteId userId:userId development:dev];
+  [Auryc initialize:token siteId:siteId userId:userId development:dev];
 }
 
 RCT_EXPORT_METHOD(identify:(NSString *)identity){
