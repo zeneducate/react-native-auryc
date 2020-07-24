@@ -60,6 +60,10 @@ class RNAuryc {
         RNAurycBridge.unMarkScreenAsSensitiveInformation();
     }
 
+    static showFeedback(feedbackId) {
+        RNAurycBridge.showFeedback(feedbackId);
+    }
+    
     // Manual Lifecycle events
 
     static didFinishLaunchingWithOptions() {
@@ -118,6 +122,6 @@ class RNAuryc {
         RNAurycBridge.overrideBuildTypeConfiguration(buildType);
     }
 
-    
+
 }
 module.exports = RNAuryc;
