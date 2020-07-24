@@ -22,6 +22,14 @@ RCT_EXPORT_METHOD(initialize:(NSString *)token siteId:(NSString *)siteId develop
   [Auryc initialize:siteId siteId:siteId development:dev];
 }
 
+RCT_EXPORT_METHOD(initialize:(NSString *)token siteId:(NSString *)siteId userId:(NSString *)userId){
+  [Auryc initialize:siteId siteId:siteId userId:userId];
+}
+
+RCT_EXPORT_METHOD(initialize:(NSString *)token siteId:(NSString *)siteId userId:(NSString *)userId development:(BOOL)dev){
+  [Auryc initialize:siteId siteId:siteId userId:userId development:dev];
+}
+
 RCT_EXPORT_METHOD(identify:(NSString *)identity){
   [[Auryc mainInstance] identify:identity];
 }

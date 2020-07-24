@@ -12,6 +12,14 @@ class RNAuryc {
         RNAurycBridge.initialize(token, siteId, dev);
     }
 
+    static initialize(token, siteId, userId) {
+        RNAurycBridge.initialize(token, siteId, userId);
+    }
+
+    static initialize(token, siteId, userId, dev) {
+        RNAurycBridge.initialize(token, siteId, userId, dev);
+    }
+
     static identify(identity) {
         RNAurycBridge.identify(identity);
     }
