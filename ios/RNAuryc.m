@@ -94,5 +94,12 @@ RCT_EXPORT_METHOD(disable) {
   [Auryc disable];
 }
 
+RCT_EXPORT_METHOD(pause) {
+    [Auryc.mainInstance pause];
+}
+
+RCT_EXPORT_METHOD(resume) {
+    [Auryc.mainInstance resume];
+}
 
 @end

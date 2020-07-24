@@ -85,5 +85,13 @@ class RNAuryc {
     static disable() {
         RNAurycBridge.disable();
     }
+
+    static pause() {
+        RNAurycBridge.pause();
+    }
+
+    static resume() {
+        RNAurycBridge.resume();
+    }
 }
 module.exports = RNAuryc;
