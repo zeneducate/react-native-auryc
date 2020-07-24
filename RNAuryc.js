@@ -12,12 +12,12 @@ class RNAuryc {
         RNAurycBridge.initializeWithUser(token, siteId, userId);
     }
 
-    static initializeDev(token, siteId, dev) {
-        RNAurycBridge.initializeDev(token, siteId, dev);
+    static initializeDev(token, siteId) {
+        RNAurycBridge.initializeDev(token, siteId, true);
     }
 
-    static initializeDevWithUser(token, siteId, userId, dev) {
-        RNAurycBridge.initializeDevWithUser(token, siteId, userId, dev);
+    static initializeDevWithUser(token, siteId, userId) {
+        RNAurycBridge.initializeDevWithUser(token, siteId, userId, true);
     }
 
     static identify(identity) {
