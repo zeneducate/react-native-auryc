@@ -110,4 +110,28 @@ RCT_EXPORT_METHOD(resume) {
     [Auryc.mainInstance resume];
 }
 
+RCT_REMAP_METHOD(urlForCurrentSessionReplay,
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject) {
+  [[Auryc mainInstance] urlForCurrentSessionReplayWithCompletion:^(NSString *currentSessionReplayUrl) {
+    if (currentSessionReplayUrl) {
+      resolve(currentSessionReplayUrl);
+    } else {
+      reject(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get urlForCurrentSessionReplay" }]);
+    }
+  }];
+}
+
+RCT_EXPORT_METHOD(enableEventMarkerGesture:(BOOL)enable) {
+  [Auryc enableEventMarkerGesture:enable];
+}
+
+RCT_EXPORT_METHOD(overrideAppVersionConfiguration:(NSString *)appVersion) {
+    [Auryc overrideAppVersionConfiguration:appVersion];
+}
+
+RCT_EXPORT_METHOD(overrideBuildTypeConfiguration:(NSString *)buildType) {
+    [Auryc overrideBuildTypeConfiguration:buildType];
+}
+
 @end

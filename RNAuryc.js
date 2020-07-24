@@ -101,5 +101,23 @@ class RNAuryc {
     static resume() {
         RNAurycBridge.resume();
     }
+
+    static urlForCurrentSessionReplay() {
+        return RNAurycBridge.urlForCurrentSessionReplay();
+    }
+  
+    static enableEventMarkerGesture(enable) {
+        RNAurycBridge.enableEventMarkerGesture(enable);
+    }
+  
+    static overrideAppVersionConfiguration(appVersion) {
+        RNAurycBridge.overrideAppVersionConfiguration(appVersion);
+    }
+  
+    static overrideBuildTypeConfiguration(buildType) {
+        RNAurycBridge.overrideBuildTypeConfiguration(buildType);
+    }
+
+    
 }
 module.exports = RNAuryc;
