@@ -8,10 +8,6 @@ class RNAuryc {
         RNAurycBridge.initialize(token, siteId);
     }
 
-    static initializeDev(token, siteId, dev) {
-        RNAurycBridge.initializeDev(token, siteId, dev);
-    }
-
     static identify(identity) {
         RNAurycBridge.identify(identity);
     }
@@ -52,8 +48,38 @@ class RNAuryc {
         RNAurycBridge.unMarkScreenAsSensitiveInformation();
     }
 
-    static showFeedback(feedbackId) {
-        RNAurycBridge.showFeedback(feedbackId);
+    // Manual Lifecycle events
+
+    static didFinishLaunchingWithOptions() {
+        RNAurycBridge.didFinishLaunchingWithOptions();
+    }
+
+    static applicationWillEnterForeground() {
+        RNAurycBridge.applicationWillEnterForeground();
+    }
+
+    static applicationDidBecomeActive() {
+        RNAurycBridge.applicationDidBecomeActive();
+    }
+
+    static applicationWillResignActive() {
+        RNAurycBridge.applicationWillResignActive();
+    }
+
+    static applicationDidEnterBackground() {
+        RNAurycBridge.applicationDidEnterBackground();
+    }
+
+    static applicationWillTerminate() {
+        RNAurycBridge.applicationWillTerminate();
+    }
+
+    static applicationDidChangeStatusBarOrientation() {
+        RNAurycBridge.applicationDidChangeStatusBarOrientation();
+    }
+
+    static disable() {
+        RNAurycBridge.disable();
     }
 }
 module.exports = RNAuryc;
