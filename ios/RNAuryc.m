@@ -163,5 +163,12 @@ RCT_REMAP_METHOD(isUserEnabled,
   }];
 }
 
+RCT_EXPORT_METHOD(startEventMarker) {
+  [[Auryc mainInstance] startEventMarker];
+}
+
+RCT_EXPORT_METHOD(stopEventMarker) {
+  [[Auryc mainInstance] stopEventMarker];
+}
 @end
 

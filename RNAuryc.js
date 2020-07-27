@@ -130,6 +130,14 @@ class RNAuryc {
     static isUserEnabled(userId) {
         RNAurycBridge.isUserEnabled(userId);
     }
+  
+    static startEventMarker() {
+        RNAurycBridge.startEventMarker();
+    }
+  
+    static stopEventMarker() {
+        RNAurycBridge.stopEventMarker();
+    }
 }
 module.exports = RNAuryc;
 
