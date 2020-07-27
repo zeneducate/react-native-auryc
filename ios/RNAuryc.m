@@ -153,5 +153,15 @@ RCT_EXPORT_METHOD(overrideBuildTypeConfiguration:(NSString *)buildType) {
     [Auryc overrideBuildTypeConfiguration:buildType];
 }
 
+RCT_REMAP_METHOD(isUserEnabled,
+                 userId:(NSString *)userId
+                 isUserEnabledResolver:(RCTPromiseResolveBlock)resolve
+                 isUserEnabledRejecter:(RCTPromiseRejectBlock)reject){
+  
+  [[Auryc mainInstance] isUserEnabled:userId withCompletion:^(bool isEnabled) {
+    resolve(@(isEnabled));
+  }];
+}
+
 @end
 

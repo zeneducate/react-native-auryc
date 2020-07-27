@@ -127,7 +127,9 @@ class RNAuryc {
         RNAurycBridge.overrideBuildTypeConfiguration(buildType);
     }
 
-
+    static isUserEnabled(userId) {
+        RNAurycBridge.isUserEnabled(userId);
+    }
 }
 module.exports = RNAuryc;
 
