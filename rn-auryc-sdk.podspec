@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "rn-auryc-sdk"
-  s.version      = "1.2.8"
+  s.version      = "1.4.0"
   s.summary      = "RNAuryc"
   s.description  = <<-DESC
                   RNAuryc
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "AurycSDK"
+  s.dependency "AurycSDK", "~> 1.5.3"
 
 end
