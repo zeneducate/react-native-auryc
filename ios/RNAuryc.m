@@ -170,5 +170,9 @@ RCT_EXPORT_METHOD(startEventMarker) {
 RCT_EXPORT_METHOD(stopEventMarker) {
   [[Auryc mainInstance] stopEventMarker];
 }
+
+RCT_EXPORT_METHOD(ignoreKeyboardGestures:(BOOL)ignoreKeyboardGestures) {
+  [Auryc ignoreKeyboardGestures:ignoreKeyboardGestures];
+}
 @end
 

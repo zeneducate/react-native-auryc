@@ -138,6 +138,10 @@ class RNAuryc {
     static stopEventMarker() {
         RNAurycBridge.stopEventMarker();
     }
+  
+  static ignoreKeyboardGestures(ignoreKeyboardGestures) {
+      RNAurycBridge.ignoreKeyboardGestures(ignoreKeyboardGestures);
+  }
 }
 module.exports = RNAuryc;
 
