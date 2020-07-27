@@ -183,20 +183,24 @@ RCT_REMAP_METHOD(aurycSDKVersionString,
   resolve(versionString);
 }
 
-RCT_EXPORT_METHOD(pauseService:(AurycService)service scope:(AurycScope)scope) {
-  [Auryc pauseService:service scope:scope];
+RCT_EXPORT_METHOD(pauseService:(int)service scope:(int)scope) {
+    AurycService serviceEnum = (AurycService)service;
+    AurycScope scopeEnum = (AurycScope)scope;
+    [Auryc pauseService:serviceEnum scope:scopeEnum];
 }
 
-RCT_EXPORT_METHOD(resumeService:(AurycService)service) {
-  [Auryc resumeService:service];
+RCT_EXPORT_METHOD(resumeService:(int)service) {
+  AurycService serviceEnum = (AurycService)service;
+  [Auryc resumeService:serviceEnum];
 }
 
 RCT_REMAP_METHOD(isPausedForService,
-                 service:(AurycService)service
+                 service:(int)service
                  isPausedForServiceResolver:(RCTPromiseResolveBlock)resolve
                  isPausedForServiceRejecter:(RCTPromiseRejectBlock)reject){
   
-  AurycScope scope = [Auryc isPausedForService:service];
+  AurycService serviceEnum = (AurycService)service;
+  AurycScope scope = [Auryc isPausedForService:serviceEnum];
   resolve(@(scope));
 }
 @end
