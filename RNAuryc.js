@@ -128,7 +128,7 @@ class RNAuryc {
     }
 
     static isUserEnabled(userId) {
-        RNAurycBridge.isUserEnabled(userId);
+        return RNAurycBridge.isUserEnabled(userId);
     }
   
     static startEventMarker() {
@@ -139,9 +139,13 @@ class RNAuryc {
         RNAurycBridge.stopEventMarker();
     }
   
-  static ignoreKeyboardGestures(ignoreKeyboardGestures) {
-      RNAurycBridge.ignoreKeyboardGestures(ignoreKeyboardGestures);
-  }
+    static ignoreKeyboardGestures(ignoreKeyboardGestures) {
+        RNAurycBridge.ignoreKeyboardGestures(ignoreKeyboardGestures);
+    }
+  
+    static aurycSDKVersionString() {
+        return RNAurycBridge.aurycSDKVersionString();
+    }
 }
 module.exports = RNAuryc;
 

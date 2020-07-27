@@ -174,5 +174,14 @@ RCT_EXPORT_METHOD(stopEventMarker) {
 RCT_EXPORT_METHOD(ignoreKeyboardGestures:(BOOL)ignoreKeyboardGestures) {
   [Auryc ignoreKeyboardGestures:ignoreKeyboardGestures];
 }
-@end
 
+RCT_REMAP_METHOD(aurycSDKVersionString,
+                 aurycSDKVersionStringResolver:(RCTPromiseResolveBlock)resolve
+                 aurycSDKVersionStringRejecter:(RCTPromiseRejectBlock)reject) {
+  
+  NSString *versionString = [Auryc aurycSDKVersionString];
+  resolve(versionString);
+}
+
+
+@end
