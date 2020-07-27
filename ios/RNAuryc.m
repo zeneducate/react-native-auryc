@@ -183,5 +183,21 @@ RCT_REMAP_METHOD(aurycSDKVersionString,
   resolve(versionString);
 }
 
+RCT_EXPORT_METHOD(pauseService:(AurycService)service scope:(AurycScope)scope) {
+  [Auryc pauseService:service scope:scope];
+}
 
+RCT_EXPORT_METHOD(resumeService:(AurycService)service) {
+  [Auryc resumeService:service];
+}
+
+RCT_REMAP_METHOD(isPausedForService,
+                 service:(AurycService)service
+                 isPausedForServiceResolver:(RCTPromiseResolveBlock)resolve
+                 isPausedForServiceRejecter:(RCTPromiseRejectBlock)reject){
+  
+  AurycScope scope = [Auryc isPausedForService:service];
+  resolve(@(scope));
+}
 @end
+

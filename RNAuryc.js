@@ -146,6 +146,18 @@ class RNAuryc {
     static aurycSDKVersionString() {
         return RNAurycBridge.aurycSDKVersionString();
     }
+  
+    static pauseService(service, scope) {
+        RNAurycBridge.pauseService(service, scope);
+    }
+  
+    static resumeService(service) {
+        RNAurycBridge.resumeService(service);
+    }
+  
+    static isPausedForService(service) {
+        return RNAurycBridge.isPausedForService(service);
+    }
 }
 module.exports = RNAuryc;
 
