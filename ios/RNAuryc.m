@@ -128,6 +128,19 @@ RCT_REMAP_METHOD(urlForCurrentSessionReplay,
   }];
 }
 
+RCT_REMAP_METHOD(metadataForCurrentSession,
+                 metadataResolver:(RCTPromiseResolveBlock)resolver
+                 metadataRejecter:(RCTPromiseRejectBlock)rejecter) {
+  
+  [[Auryc mainInstance] metadataForCurrentSessionWithCompletion:^(NSDictionary<NSString *,NSString *> *sessionMetadata) {
+    if (sessionMetadata) {
+      resolver(sessionMetadata);
+    } else {
+      rejecter(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.react-natice.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get metadataForCurrentSession" }]);
+    }
+  }];
+}
+
 RCT_EXPORT_METHOD(enableEventMarkerGesture:(BOOL)enable) {
   [Auryc enableEventMarkerGesture:enable];
 }

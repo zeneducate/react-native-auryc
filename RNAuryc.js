@@ -94,6 +94,7 @@ class RNAuryc {
         RNAurycBridge.applicationDidChangeStatusBarOrientation();
     }
 
+  // Advanced API
     static disable() {
         RNAurycBridge.disable();
     }
@@ -108,6 +109,10 @@ class RNAuryc {
 
     static urlForCurrentSessionReplay() {
         return RNAurycBridge.urlForCurrentSessionReplay();
+    }
+  
+    static metadataForCurrentSession() {
+        return RNAurycBridge.metadataForCurrentSession();
     }
   
     static enableEventMarkerGesture(enable) {
@@ -125,3 +130,4 @@ class RNAuryc {
 
 }
 module.exports = RNAuryc;
+
