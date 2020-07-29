@@ -38,6 +38,11 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     Auryc.initialize(this.mApplication);
   }
 
+  public final void initializeDev(final String apiKey, final String siteId) {
+    // apiKey and siteId are added for consistency with ios sdk.
+    Auryc.initialize(this.mApplication, true);
+  }
+  
   @ReactMethod
   public static final void addSessionProperties(final ReadableMap properties) {
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
