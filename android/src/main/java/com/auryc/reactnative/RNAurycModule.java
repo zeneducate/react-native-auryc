@@ -43,7 +43,7 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
 
     if(nativeProperties != null) {
-      Auryc.addSessionProperties(nativeProperties.toHashMap());
+//      Auryc.addSessionProperties(nativeProperties.toHashMap());
     }
   }
 
@@ -52,7 +52,7 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
 
     if(nativeProperties != null) {
-      Auryc.addUserProperties(nativeProperties.toHashMap());
+//      Auryc.addUserProperties(nativeProperties.toHashMap());
     }
   }
 
@@ -62,7 +62,7 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     if(nativeProperties == null) {
       Auryc.track(eventName);
     } else {
-      Auryc.track(eventName, nativeProperties.toHashMap());
+//      Auryc.track(eventName, nativeProperties.toHashMap());
     }
   }
 
