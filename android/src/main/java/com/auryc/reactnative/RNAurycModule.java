@@ -2,6 +2,8 @@
 package com.auryc.reactnative;
 
 import android.app.Application;
+import android.view.View;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -42,13 +44,14 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     // apiKey and siteId are added for consistency with ios sdk.
     Auryc.initialize(this.mApplication, true);
   }
-  
+
   @ReactMethod
   public static final void addSessionProperties(final ReadableMap properties) {
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
 
     if(nativeProperties != null) {
-//      Auryc.addSessionProperties(nativeProperties.toHashMap());
+      HashMap hashMap = nativeProperties.toHashMap();
+      Auryc.addSessionProperties(hashMap);
     }
   }
 
@@ -57,7 +60,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
 
     if(nativeProperties != null) {
-//      Auryc.addUserProperties(nativeProperties.toHashMap());
+      HashMap hashMap = nativeProperties.toHashMap();
+      Auryc.addUserProperties(hashMap);
     }
   }
 
@@ -67,7 +71,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     if(nativeProperties == null) {
       Auryc.track(eventName);
     } else {
-//      Auryc.track(eventName, nativeProperties.toHashMap());
+      HashMap hashMap = nativeProperties.toHashMap();
+      Auryc.track(eventName, hashMap);
     }
   }
 
@@ -76,5 +81,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     Auryc.identify(identity);
   }
 
-  // TODO: add masking APIs
+  @ReactMethod
+  public static final void markViewAsSensitiveInformation(final View view) {
+    Auryc.markViewAsSensitiveInformation(view);
+  }
 }
