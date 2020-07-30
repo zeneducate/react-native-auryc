@@ -62,13 +62,8 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public static final void addSessionProperties(final ReadableMap properties) {
-    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
-
-    if(nativeProperties != null) {
-      HashMap hashMap = nativeProperties.toHashMap();
-      Auryc.addSessionProperties(hashMap);
-    }
+  public static final void identify(final String identity) {
+    Auryc.identify(identity);
   }
 
   @ReactMethod
@@ -82,6 +77,16 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public static final void addSessionProperties(final ReadableMap properties) {
+    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
+
+    if(nativeProperties != null) {
+      HashMap hashMap = nativeProperties.toHashMap();
+      Auryc.addSessionProperties(hashMap);
+    }
+  }
+
+  @ReactMethod
   public static void track(final String eventName, final ReadableMap properties){
     ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
     if(nativeProperties == null) {
@@ -90,11 +95,6 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
       HashMap hashMap = nativeProperties.toHashMap();
       Auryc.track(eventName, hashMap);
     }
-  }
-
-  @ReactMethod
-  public static final void identify(final String identity) {
-    Auryc.identify(identity);
   }
 
   @ReactMethod
@@ -133,16 +133,6 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public static final void startEventMarker() {
-    Auryc.startEventMarker();
-  }
-
-  @ReactMethod
-  public static final void stopEventMarker() {
-    Auryc.stopEventMarker();
-  }
-
-  @ReactMethod
   public static final void urlForCurrentSessionReplay(final Promise promise) {
     Auryc.urlForCurrentSessionReplayWithCompletion(new UrlForCurrentSessionReplayCallback() {
       @Override
@@ -168,5 +158,68 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
         promise.resolve(metadata);
       }
     });
+  }
+
+  @ReactMethod
+  public static final void startEventMarker() {
+    Auryc.startEventMarker();
+  }
+
+  @ReactMethod
+  public static final void stopEventMarker() {
+    Auryc.stopEventMarker();
+  }
+  
+  @ReactMethod
+  public static final void showFeedback(final String feedbackId) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void enableEventMarkerGesture(final boolean enable) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void overrideAppVersionConfiguration(final String appVersion) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void overrideBuildTypeConfiguration(final String buildType) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void isUserEnabled(final String userId, final Promise promise) {
+    // TODO: needs implementation
+    promise.resolve("");
+  }
+
+  @ReactMethod
+  public static final void ignoreKeyboardGestures(final boolean ignore) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void aurycSDKVersionString(final Promise promise) {
+    // TODO: needs implementation
+    promise.resolve("");
+  }
+
+  @ReactMethod
+  public static final void pauseService(final int service, final int scope) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void resumeService(final int service) {
+    // TODO: needs implementation
+  }
+
+  @ReactMethod
+  public static final void isPausedForService(final int service, final Promise promise) {
+    // TODO: needs implementation
+    promise.resolve("");
   }
 }
