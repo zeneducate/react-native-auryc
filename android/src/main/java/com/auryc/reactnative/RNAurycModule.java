@@ -169,7 +169,7 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   public static final void stopEventMarker() {
     Auryc.stopEventMarker();
   }
-  
+
   @ReactMethod
   public static final void showFeedback(final String feedbackId) {
     // TODO: needs implementation
