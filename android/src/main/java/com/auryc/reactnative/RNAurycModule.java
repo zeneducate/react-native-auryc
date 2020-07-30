@@ -85,4 +85,44 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   public static final void markViewAsSensitiveInformation(final View view) {
     Auryc.markViewAsSensitiveInformation(view);
   }
+
+  @ReactMethod
+  public static final void unMarkViewAsSensitiveInformation(final View view) {
+    Auryc.unMarkViewAsSensitiveInformation(view);
+  }
+
+  @ReactMethod
+  public static final void markScreenAsSensitiveInformation() {
+    Auryc.markScreenAsSensitiveInformation();
+  }
+
+  @ReactMethod
+  public static final void unMarkScreenAsSensitiveInformation() {
+    Auryc.unMarkScreenAsSensitiveInformation();
+  }
+
+  @ReactMethod
+  public static final void disable() {
+    Auryc.disable();
+  }
+
+  @ReactMethod
+  public static final void pause() {
+    Auryc.pauseCurrentAndFutureSessions();
+  }
+
+  @ReactMethod
+  public static final void resume() {
+    Auryc.resumeCurrentAndFutureSessions();
+  }
+
+  @ReactMethod
+  public static final void startEventMarker() {
+    Auryc.startEventMarker();
+  }
+
+  @ReactMethod
+  public static final void stopEventMarker() {
+    Auryc.stopEventMarker();
+  }
 }
