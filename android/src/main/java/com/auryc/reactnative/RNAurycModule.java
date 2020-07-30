@@ -4,6 +4,7 @@ package com.auryc.reactnative;
 import android.app.Application;
 import android.view.View;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -16,6 +17,8 @@ import java.util.HashMap;
 
 
 import auryc.com.Auryc;
+import auryc.com.callback.MetadataForCurrentSessionCallback;
+import auryc.com.callback.UrlForCurrentSessionReplayCallback;
 
 public class RNAurycModule extends ReactContextBaseJavaModule {
 
@@ -35,14 +38,27 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public final void initialize(final String apiKey, final String siteId) {
+  public final void initialize(final String token, final String siteId) {
     // apiKey and siteId are added for consistency with ios sdk.
     Auryc.initialize(this.mApplication);
   }
 
-  public final void initializeDev(final String apiKey, final String siteId) {
+  @ReactMethod
+  public final void initializeWithUser(final String token, final String siteId, final String userId) {
+    // apiKey and siteId are added for consistency with ios sdk.
+    Auryc.initialize(this.mApplication, userId);
+  }
+
+  @ReactMethod
+  public final void initializeDev(final String token, final String siteId) {
     // apiKey and siteId are added for consistency with ios sdk.
     Auryc.initialize(this.mApplication, true);
+  }
+
+  @ReactMethod
+  public final void initializeDevWithUser(final String token, final String siteId, final String userId) {
+    // apiKey and siteId are added for consistency with ios sdk.
+    Auryc.initialize(this.mApplication, userId, true);
   }
 
   @ReactMethod
@@ -124,5 +140,33 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public static final void stopEventMarker() {
     Auryc.stopEventMarker();
+  }
+
+  @ReactMethod
+  public static final void urlForCurrentSessionReplay(final Promise promise) {
+    Auryc.urlForCurrentSessionReplayWithCompletion(new UrlForCurrentSessionReplayCallback() {
+      @Override
+      public void onFailure(String reason) {
+        promise.reject(reason);
+      }
+      @Override
+      public void onSuccess(String sessionUrl) {
+        promise.resolve(sessionUrl);
+      }
+    });
+  }
+
+  @ReactMethod
+  public static final void metadataForCurrentSession(final Promise promise) {
+    Auryc.metadataForCurrentSessionWithCompletion(new MetadataForCurrentSessionCallback() {
+      @Override
+      public void onFailure(String reason) {
+        promise.reject(reason);
+      }
+      @Override
+      public void onSuccess(HashMap<String, Object> metadata) {
+        promise.resolve(metadata);
+      }
+    });
   }
 }
