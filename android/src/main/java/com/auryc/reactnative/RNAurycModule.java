@@ -236,6 +236,6 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   public static final void isPausedForService(final int service, final Promise promise) {
     Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
     Constant.AURYC.SCOPE returnValue = Auryc.isPausedForService(parsedService);
-    promise.resolve(returnValue);
+    promise.resolve(returnValue.getValue());
   }
 }
