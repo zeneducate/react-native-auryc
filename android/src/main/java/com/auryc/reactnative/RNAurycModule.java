@@ -13,12 +13,15 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableNativeMap;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 
 import auryc.com.Auryc;
+import auryc.com.Constant;
 import auryc.com.callback.MetadataForCurrentSessionCallback;
 import auryc.com.callback.UrlForCurrentSessionReplayCallback;
+import auryc.com.callback.UserIdFilterCallback;
 
 public class RNAurycModule extends ReactContextBaseJavaModule {
 
@@ -177,49 +180,62 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public static final void enableEventMarkerGesture(final boolean enable) {
-    // TODO: needs implementation
+    Auryc.enableEventMarkerGesture(enable);
   }
 
   @ReactMethod
   public static final void overrideAppVersionConfiguration(final String appVersion) {
-    // TODO: needs implementation
+    Auryc.overrideAppVersionConfiguration(appVersion);
   }
 
   @ReactMethod
   public static final void overrideBuildTypeConfiguration(final String buildType) {
-    // TODO: needs implementation
+    Auryc.overrideBuildTypeConfiguration(buildType);
   }
 
   @ReactMethod
   public static final void isUserEnabled(final String userId, final Promise promise) {
-    // TODO: needs implementation
-    promise.resolve("");
+    Auryc.isUserEnabled(userId, new UserIdFilterCallback() {
+      @Override
+      public void onFailure(IOException e) {
+        promise.resolve(false);
+      }
+      @Override
+      public void onSuccess(Boolean isEnabled) {
+        promise.resolve(isEnabled);
+      }
+    });
   }
 
   @ReactMethod
   public static final void ignoreKeyboardGestures(final boolean ignore) {
-    // TODO: needs implementation
+    // this does not apply for Android.
+    // adding it to avoid crash in case a customer has both ios and android
+    // in the same react native project.
   }
 
   @ReactMethod
   public static final void aurycSDKVersionString(final Promise promise) {
-    // TODO: needs implementation
-    promise.resolve("");
+    promise.resolve(Auryc.aurycSDKVersionString());
   }
 
   @ReactMethod
   public static final void pauseService(final int service, final int scope) {
-    // TODO: needs implementation
+    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+    Constant.AURYC.SCOPE parsedScope = Constant.AURYC.SCOPE.values()[scope];
+    Auryc.pauseService(parsedService, parsedScope);
   }
 
   @ReactMethod
   public static final void resumeService(final int service) {
-    // TODO: needs implementation
+    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+    Auryc.resumeService(parsedService);
   }
 
   @ReactMethod
   public static final void isPausedForService(final int service, final Promise promise) {
-    // TODO: needs implementation
-    promise.resolve("");
+    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+    Constant.AURYC.SCOPE returnValue = Auryc.isPausedForService(parsedService);
+    promise.resolve(returnValue);
   }
 }
