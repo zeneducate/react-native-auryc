@@ -65,38 +65,15 @@ Auryc.addUserProperties({'company': 'Example Inc'});
       repositories {
         ...
         maven {
-          url "http://maven.auryc.com"
-        }
-        maven {
           url "https://bintray.auryc.com/repository/android-sdk/"
-    }
+        }
 
         ...
       }
     }
     ```
 
-    1.2  In the module level, build.gradle, define minimum SDK version to 18 and include the packaging options.
-    ```
-    android{
-    ...
-    defaultConfig {
-      ...
-      minSdkVersion 18
-      multiDexEnabled false
-      ...
-    }
-    }
-    ```
-
-    Then, add the Auryc SDK dependency.
-    ```
-    dependencies {
-      compile 'com.auryc:android-sdk:2.1.0'
-    }
-    ```
-
-    1.3 In your res/values/strings.xml, add the token and site_id.
+    1.2 In your res/values/strings.xml, add the token and site_id.
     ```xml
     <string name="auryc_token">YOUR_SITE_TOKEN</string>
     <string name="auryc_site_id">YOUR_SITE_ID</string>
@@ -104,18 +81,10 @@ Auryc.addUserProperties({'company': 'Example Inc'});
 
 2. Add the Auryc package to your project
 ```
-npm install react-native-auryc --save
-react-native link react-native-auryc
+npx install rn-auryc-sdk
 ```
 
-3. Open MainApplication.java and change
-`new RNAurycPackage()`
-to
-`
-new RNAurycPackage(this.getApplication())
-`
-
-4. Call the following method when your app starts (when your root component loads):
+3. Call the following method when your app starts (when your root component loads):
 ```javascript
 import Auryc from 'react-native-auryc';
 
@@ -130,6 +99,13 @@ Auryc.identify('abc@example.com')
 Auryc.addUserProperties({'company': 'Example Inc'});
 ...
 ```
+
+5. run your android project
+```
+npx react-native run-android
+```
+
+
 ## Other notes
 ### Android integration
 1. Use gradle version 4+
