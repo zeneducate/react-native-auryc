@@ -1,13 +1,17 @@
 {
   "name": "rn-auryc-sdk",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "React native bridge library for Auryc SDK",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "android",
+    "ios",
+    "session-replay",
+    "auryc"
   ],
   "author": "Auryc Inc.",
   "license": "MIT",
