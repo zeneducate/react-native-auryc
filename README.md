@@ -81,7 +81,7 @@ Auryc.addUserProperties({'company': 'Example Inc'});
 
 2. Add the Auryc package to your project
 ```
-npx install rn-auryc-sdk
+npm install rn-auryc-sdk
 ```
 
 3. Call the following method when your app starts (when your root component loads):
