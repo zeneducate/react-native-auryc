@@ -15,15 +15,12 @@ import com.facebook.react.bridge.JavaScriptModule;
 
 public class RNAurycPackage implements ReactPackage {
 
-    private Application mApplication = null;
-
-    public RNAurycPackage(Application application) {
-        mApplication = application;
+    public RNAurycPackage() {
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNAurycModule(reactContext, this.mApplication));
+      return Arrays.<NativeModule>asList(new RNAurycModule(reactContext));
     }
 
     // Deprecated from RN 0.47

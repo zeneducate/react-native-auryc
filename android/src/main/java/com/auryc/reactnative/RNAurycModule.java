@@ -29,10 +29,10 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   private Application mApplication = null;
 
 
-  public RNAurycModule(ReactApplicationContext reactContext, Application application) {
+  public RNAurycModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
-    this.mApplication = application;
+    // this.mApplication = application;
   }
 
   @Override
@@ -40,28 +40,33 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
     return "RNAuryc";
   }
 
+  private Application getApplication () {
+    Application application = (Application)this.reactContext.getApplicationContext();
+    return application;
+  }
+
   @ReactMethod
   public final void initialize(final String token, final String siteId) {
     // apiKey and siteId are added for consistency with ios sdk.
-    Auryc.initialize(this.mApplication);
+    Auryc.initialize(this.getApplication());
   }
 
   @ReactMethod
   public final void initializeWithUser(final String token, final String siteId, final String userId) {
     // apiKey and siteId are added for consistency with ios sdk.
-    Auryc.initialize(this.mApplication, userId);
+    Auryc.initialize(this.getApplication(), userId);
   }
 
   @ReactMethod
   public final void initializeDev(final String token, final String siteId) {
     // apiKey and siteId are added for consistency with ios sdk.
-    Auryc.initialize(this.mApplication, true);
+    Auryc.initialize(this.getApplication(), true);
   }
 
   @ReactMethod
   public final void initializeDevWithUser(final String token, final String siteId, final String userId) {
     // apiKey and siteId are added for consistency with ios sdk.
-    Auryc.initialize(this.mApplication, userId, true);
+    Auryc.initialize(this.getApplication(), userId, true);
   }
 
   @ReactMethod
@@ -175,7 +180,7 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public static final void showFeedback(final String feedbackId) {
-    // TODO: needs implementation
+    Auryc.showFeedback(feedbackId);
   }
 
   @ReactMethod
