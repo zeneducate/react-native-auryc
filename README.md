@@ -65,7 +65,7 @@ Auryc.addUserProperties({'company': 'Example Inc'});
       repositories {
         ...
         maven {
-          url "https://bintray.auryc.com/repository/android-sdk/"
+          url "https://bintray.auryc.com/repository/android-sdk-voc/"
         }
 
         ...

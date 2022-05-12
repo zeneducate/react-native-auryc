@@ -17,11 +17,8 @@ import java.io.IOException;
 import java.util.HashMap;
 
 
-import auryc.com.Auryc;
-import auryc.com.Constant;
-import auryc.com.callback.MetadataForCurrentSessionCallback;
-import auryc.com.callback.UrlForCurrentSessionReplayCallback;
-import auryc.com.callback.UserIdFilterCallback;
+import com.Auryc;
+import com.auryc.android_sdk_voc.shared.Constant;
 
 public class RNAurycModule extends ReactContextBaseJavaModule {
 
@@ -32,7 +29,6 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
   public RNAurycModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
-    // this.mApplication = application;
   }
 
   @Override
@@ -71,111 +67,111 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public static final void identify(final String identity) {
-    Auryc.identify(identity);
+//    Auryc.identify(identity);
   }
 
   @ReactMethod
   public static final void addUserProperties(final ReadableMap properties){
-    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
-
-    if(nativeProperties != null) {
-      HashMap hashMap = nativeProperties.toHashMap();
-      Auryc.addUserProperties(hashMap);
-    }
+//    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
+//
+//    if(nativeProperties != null) {
+//      HashMap hashMap = nativeProperties.toHashMap();
+//      Auryc.addUserProperties(hashMap);
+//    }
   }
 
   @ReactMethod
   public static final void addSessionProperties(final ReadableMap properties) {
-    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
-
-    if(nativeProperties != null) {
-      HashMap hashMap = nativeProperties.toHashMap();
-      Auryc.addSessionProperties(hashMap);
-    }
+//    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
+//
+//    if(nativeProperties != null) {
+//      HashMap hashMap = nativeProperties.toHashMap();
+//      Auryc.addSessionProperties(hashMap);
+//    }
   }
 
   @ReactMethod
   public static void track(final String eventName, final ReadableMap properties){
-    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
-    if(nativeProperties == null) {
-      Auryc.track(eventName);
-    } else {
-      HashMap hashMap = nativeProperties.toHashMap();
-      Auryc.track(eventName, hashMap);
-    }
+//    ReadableNativeMap nativeProperties = (ReadableNativeMap) properties;
+//    if(nativeProperties == null) {
+//      Auryc.track(eventName);
+//    } else {
+//      HashMap hashMap = nativeProperties.toHashMap();
+//      Auryc.track(eventName, hashMap);
+//    }
   }
 
   @ReactMethod
   public static final void markViewAsSensitiveInformation(final View view) {
-    Auryc.markViewAsSensitiveInformation(view);
+//    Auryc.markViewAsSensitiveInformation(view);
   }
 
   @ReactMethod
   public static final void unMarkViewAsSensitiveInformation(final View view) {
-    Auryc.unMarkViewAsSensitiveInformation(view);
+//    Auryc.unMarkViewAsSensitiveInformation(view);
   }
 
   @ReactMethod
   public static final void markScreenAsSensitiveInformation() {
-    Auryc.markScreenAsSensitiveInformation();
+//    Auryc.markScreenAsSensitiveInformation();
   }
 
   @ReactMethod
   public static final void unMarkScreenAsSensitiveInformation() {
-    Auryc.unMarkScreenAsSensitiveInformation();
+//    Auryc.unMarkScreenAsSensitiveInformation();
   }
 
   @ReactMethod
   public static final void disable() {
-    Auryc.disable();
+//      Auryc.disable();
   }
 
   @ReactMethod
   public static final void pause() {
-    Auryc.pauseCurrentAndFutureSessions();
+//    Auryc.pauseCurrentAndFutureSessions();
   }
 
   @ReactMethod
   public static final void resume() {
-    Auryc.resumeCurrentAndFutureSessions();
+//    Auryc.resumeCurrentAndFutureSessions();
   }
 
   @ReactMethod
   public static final void urlForCurrentSessionReplay(final Promise promise) {
-    Auryc.urlForCurrentSessionReplayWithCompletion(new UrlForCurrentSessionReplayCallback() {
-      @Override
-      public void onFailure(String reason) {
-        promise.reject(reason);
-      }
-      @Override
-      public void onSuccess(String sessionUrl) {
-        promise.resolve(sessionUrl);
-      }
-    });
+//    Auryc.urlForCurrentSessionReplayWithCompletion(new UrlForCurrentSessionReplayCallback() {
+//      @Override
+//      public void onFailure(String reason) {
+//        promise.reject(reason);
+//      }
+//      @Override
+//      public void onSuccess(String sessionUrl) {
+//        promise.resolve(sessionUrl);
+//      }
+//    });
   }
 
   @ReactMethod
   public static final void metadataForCurrentSession(final Promise promise) {
-    Auryc.metadataForCurrentSessionWithCompletion(new MetadataForCurrentSessionCallback() {
-      @Override
-      public void onFailure(String reason) {
-        promise.reject(reason);
-      }
-      @Override
-      public void onSuccess(HashMap<String, Object> metadata) {
-        promise.resolve(metadata);
-      }
-    });
+//    Auryc.metadataForCurrentSessionWithCompletion(new MetadataForCurrentSessionCallback() {
+//      @Override
+//      public void onFailure(String reason) {
+//        promise.reject(reason);
+//      }
+//      @Override
+//      public void onSuccess(HashMap<String, Object> metadata) {
+//        promise.resolve(metadata);
+//      }
+//    });
   }
 
   @ReactMethod
   public static final void startEventMarker() {
-    Auryc.startEventMarker();
+//    Auryc.startEventMarker();
   }
 
   @ReactMethod
   public static final void stopEventMarker() {
-    Auryc.stopEventMarker();
+//    Auryc.stopEventMarker();
   }
 
   @ReactMethod
@@ -185,31 +181,31 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public static final void enableEventMarkerGesture(final boolean enable) {
-    Auryc.enableEventMarkerGesture(enable);
+//    Auryc.enableEventMarkerGesture(enable);
   }
 
   @ReactMethod
   public static final void overrideAppVersionConfiguration(final String appVersion) {
-    Auryc.overrideAppVersionConfiguration(appVersion);
+//    Auryc.overrideAppVersionConfiguration(appVersion);
   }
 
   @ReactMethod
   public static final void overrideBuildTypeConfiguration(final String buildType) {
-    Auryc.overrideBuildTypeConfiguration(buildType);
+//    Auryc.overrideBuildTypeConfiguration(buildType);
   }
 
   @ReactMethod
   public static final void isUserEnabled(final String userId, final Promise promise) {
-    Auryc.isUserEnabled(userId, new UserIdFilterCallback() {
-      @Override
-      public void onFailure(IOException e) {
-        promise.resolve(false);
-      }
-      @Override
-      public void onSuccess(Boolean isEnabled) {
-        promise.resolve(isEnabled);
-      }
-    });
+//    Auryc.isUserEnabled(userId, new UserIdFilterCallback() {
+//      @Override
+//      public void onFailure(IOException e) {
+//        promise.resolve(false);
+//      }
+//      @Override
+//      public void onSuccess(Boolean isEnabled) {
+//        promise.resolve(isEnabled);
+//      }
+//    });
   }
 
   @ReactMethod
@@ -226,21 +222,21 @@ public class RNAurycModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public static final void pauseService(final int service, final int scope) {
-    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
-    Constant.AURYC.SCOPE parsedScope = Constant.AURYC.SCOPE.values()[scope];
-    Auryc.pauseService(parsedService, parsedScope);
+//    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+//    Constant.AURYC.SCOPE parsedScope = Constant.AURYC.SCOPE.values()[scope];
+//    Auryc.pauseService(parsedService, parsedScope);
   }
 
   @ReactMethod
   public static final void resumeService(final int service) {
-    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
-    Auryc.resumeService(parsedService);
+//    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+//    Auryc.resumeService(parsedService);
   }
 
   @ReactMethod
   public static final void isPausedForService(final int service, final Promise promise) {
-    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
-    Constant.AURYC.SCOPE returnValue = Auryc.isPausedForService(parsedService);
-    promise.resolve(returnValue.getValue());
+//    Constant.AURYC.SERVICE parsedService = Constant.AURYC.SERVICE.values()[service];
+//    Constant.AURYC.SCOPE returnValue = Auryc.isPausedForService(parsedService);
+//    promise.resolve(returnValue.getValue());
   }
 }

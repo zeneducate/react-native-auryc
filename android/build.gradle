@@ -6,7 +6,8 @@ buildscript {
         maven { url 'https://maven.google.com' }
         maven {
             url "http://maven.auryc.com"
-        }  
+        }
+        google()
     }
 
     dependencies {
@@ -34,7 +35,7 @@ android {
 repositories {
     mavenCentral()
     maven {
-        url "https://bintray.auryc.com/repository/android-sdk/"
+        url "https://bintray.auryc.com/repository/android-sdk-voc/"
     }
     maven { url 'https://maven.google.com' }
     maven {
@@ -45,7 +46,7 @@ repositories {
 
 dependencies {
     api "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.auryc:android-sdk:2.2.0'
+    implementation 'com.auryc:android-sdk-voc:2.3.0'
 }
 
 
