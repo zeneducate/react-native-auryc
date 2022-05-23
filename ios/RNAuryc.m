@@ -7,7 +7,7 @@
 //
 
 #import "RNAuryc.h"
-#import <AurycSDK/Auryc.h>
+#import <AurycSDK_VOC/Auryc.h>
 
 @implementation RNAuryc
 @synthesize bridge = _bridge;
