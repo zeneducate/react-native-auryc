@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependency "AurycSDK_VOC", ">= 2.1.0"
+  s.dependency "AurycSDK", ">= 2.1.1"
 
 end

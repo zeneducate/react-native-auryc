@@ -7,7 +7,7 @@
 //
 
 #import "RNAuryc.h"
-#import <AurycSDK_VOC/Auryc.h>
+#import <AurycSDK/Auryc.h>
 
 @implementation RNAuryc
 @synthesize bridge = _bridge;
@@ -47,25 +47,25 @@ RCT_EXPORT_METHOD(track: (NSString *) eventName properties:(NSDictionary *)prope
 }
 
 RCT_EXPORT_METHOD(markViewAsSensitiveInformation:(nonnull NSNumber *)tag) {
-  // dispatch_async(dispatch_get_main_queue(), ^{
-  //   UIView *view = [self.bridge.uiManager viewForReactTag:tag];
-  //   [[Auryc mainInstance] markViewAsSensitiveInformation:view];
-  // });
+  dispatch_async(dispatch_get_main_queue(), ^{
+    UIView *view = [self.bridge.uiManager viewForReactTag:tag];
+    [[Auryc mainInstance] markViewAsSensitiveInformation:view];
+  });
 }
 
 RCT_EXPORT_METHOD(unMarkViewAsSensitiveInformation:(nonnull NSNumber *)tag) {
-  // dispatch_async(dispatch_get_main_queue(), ^{
-  //   UIView *view = [self.bridge.uiManager viewForReactTag:tag];
-  //   [[Auryc mainInstance] unMarkViewAsSensitiveInformation:view];
-  // });
+  dispatch_async(dispatch_get_main_queue(), ^{
+    UIView *view = [self.bridge.uiManager viewForReactTag:tag];
+    [[Auryc mainInstance] unMarkViewAsSensitiveInformation:view];
+  });
 }
 
 RCT_EXPORT_METHOD(markScreenAsSensitiveInformation) {
-  // [[Auryc mainInstance] markScreenAsSensitiveInformation];
+  [[Auryc mainInstance] markScreenAsSensitiveInformation];
 }
 
 RCT_EXPORT_METHOD(unMarkScreenAsSensitiveInformation) {
-  // [[Auryc mainInstance] unMarkScreenAsSensitiveInformation];
+  [[Auryc mainInstance] unMarkScreenAsSensitiveInformation];
 }
 
 RCT_EXPORT_METHOD(showFeedback:(NSString *)feedbackID) {
@@ -77,80 +77,80 @@ RCT_EXPORT_METHOD(showFeedback:(NSString *)feedbackID) {
 // Manual Lifecycle events
 
 RCT_EXPORT_METHOD(didFinishLaunchingWithOptions) {
-  // [[Auryc mainInstance] didFinishLaunchingWithOptions];
+  [[Auryc mainInstance] didFinishLaunchingWithOptions];
 }
 
 RCT_EXPORT_METHOD(applicationWillEnterForeground) {
-  // [[Auryc mainInstance] applicationWillEnterForeground];
+  [[Auryc mainInstance] applicationWillEnterForeground];
 }
 
 RCT_EXPORT_METHOD(applicationDidBecomeActive) {
-  // [[Auryc mainInstance] applicationDidBecomeActive];
+  [[Auryc mainInstance] applicationDidBecomeActive];
 }
 
 RCT_EXPORT_METHOD(applicationWillResignActive) {
-  // [[Auryc mainInstance] applicationWillResignActive];
+  [[Auryc mainInstance] applicationWillResignActive];
 }
 
 RCT_EXPORT_METHOD(applicationDidEnterBackground) {
-  // [[Auryc mainInstance] applicationDidEnterBackground];
+  [[Auryc mainInstance] applicationDidEnterBackground];
 }
 
 RCT_EXPORT_METHOD(applicationWillTerminate) {
-  // [[Auryc mainInstance] applicationWillTerminate];
+  [[Auryc mainInstance] applicationWillTerminate];
 }
 
 RCT_EXPORT_METHOD(applicationDidChangeStatusBarOrientation) {
-  // [[Auryc mainInstance] applicationDidChangeStatusBarOrientation];
+  [[Auryc mainInstance] applicationDidChangeStatusBarOrientation];
 }
 
 RCT_EXPORT_METHOD(disable) {
-  // [Auryc disable];
+  [Auryc disable];
 }
 
 RCT_EXPORT_METHOD(pause) {
-    // [Auryc.mainInstance pause];
+    [Auryc.mainInstance pause];
 }
 
 RCT_EXPORT_METHOD(resume) {
-    // [Auryc.mainInstance resume];
+    [Auryc.mainInstance resume];
 }
 
 RCT_REMAP_METHOD(urlForCurrentSessionReplay,
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
-  // [[Auryc mainInstance] urlForCurrentSessionReplayWithCompletion:^(NSString *currentSessionReplayUrl) {
-  //   if (currentSessionReplayUrl) {
-  //     resolve(currentSessionReplayUrl);
-  //   } else {
-  //     reject(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get urlForCurrentSessionReplay" }]);
-  //   }
-  // }];
+  [[Auryc mainInstance] urlForCurrentSessionReplayWithCompletion:^(NSString *currentSessionReplayUrl) {
+    if (currentSessionReplayUrl) {
+      resolve(currentSessionReplayUrl);
+    } else {
+      reject(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get urlForCurrentSessionReplay" }]);
+    }
+  }];
 }
 
 RCT_REMAP_METHOD(metadataForCurrentSession,
                  metadataResolver:(RCTPromiseResolveBlock)resolver
                  metadataRejecter:(RCTPromiseRejectBlock)rejecter) {
   
-  // [[Auryc mainInstance] metadataForCurrentSessionWithCompletion:^(NSDictionary<NSString *,NSString *> *sessionMetadata) {
-  //   if (sessionMetadata) {
-  //     resolver(sessionMetadata);
-  //   } else {
-  //     rejecter(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.react-natice.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get metadataForCurrentSession" }]);
-  //   }
-  // }];
+  [[Auryc mainInstance] metadataForCurrentSessionWithCompletion:^(NSDictionary<NSString *,NSString *> *sessionMetadata) {
+    if (sessionMetadata) {
+      resolver(sessionMetadata);
+    } else {
+      rejecter(@"", @"", [NSError errorWithDomain:@"com.auryc.ios.react-natice.sdk" code:0 userInfo:@{ @"Error": @"there was an error trying to get metadataForCurrentSession" }]);
+    }
+  }];
 }
 
 RCT_EXPORT_METHOD(enableEventMarkerGesture:(BOOL)enable) {
-  // [Auryc enableEventMarkerGesture:enable];
+  [Auryc enableEventMarkerGesture:enable];
 }
 
 RCT_EXPORT_METHOD(overrideAppVersionConfiguration:(NSString *)appVersion) {
-    // [Auryc overrideAppVersionConfiguration:appVersion];
+    [Auryc overrideAppVersionConfiguration:appVersion];
 }
 
 RCT_EXPORT_METHOD(overrideBuildTypeConfiguration:(NSString *)buildType) {
-    // [Auryc overrideBuildTypeConfiguration:buildType];
+    [Auryc overrideBuildTypeConfiguration:buildType];
 }
 
 RCT_REMAP_METHOD(isUserEnabled,
@@ -158,21 +158,21 @@ RCT_REMAP_METHOD(isUserEnabled,
                  isUserEnabledResolver:(RCTPromiseResolveBlock)resolve
                  isUserEnabledRejecter:(RCTPromiseRejectBlock)reject){
   
-  // [[Auryc mainInstance] isUserEnabled:userId withCompletion:^(bool isEnabled) {
-  //   resolve(@(isEnabled));
-  // }];
+  [[Auryc mainInstance] isUserEnabled:userId withCompletion:^(bool isEnabled) {
+    resolve(@(isEnabled));
+  }];
 }
 
 RCT_EXPORT_METHOD(startEventMarker) {
-  // [[Auryc mainInstance] startEventMarker];
+  [[Auryc mainInstance] startEventMarker];
 }
 
 RCT_EXPORT_METHOD(stopEventMarker) {
-  // [[Auryc mainInstance] stopEventMarker];
+  [[Auryc mainInstance] stopEventMarker];
 }
 
 RCT_EXPORT_METHOD(ignoreKeyboardGestures:(BOOL)ignoreKeyboardGestures) {
-  // [Auryc ignoreKeyboardGestures:ignoreKeyboardGestures];
+  [Auryc ignoreKeyboardGestures:ignoreKeyboardGestures];
 }
 
 RCT_REMAP_METHOD(aurycSDKVersionString,
@@ -184,14 +184,14 @@ RCT_REMAP_METHOD(aurycSDKVersionString,
 }
 
 RCT_EXPORT_METHOD(pauseService:(int)service scope:(int)scope) {
-    // AurycService serviceEnum = (AurycService)service;
-    // AurycScope scopeEnum = (AurycScope)scope;
-    // [Auryc pauseService:serviceEnum scope:scopeEnum];
+    AurycService serviceEnum = (AurycService)service;
+    AurycScope scopeEnum = (AurycScope)scope;
+    [Auryc pauseService:serviceEnum scope:scopeEnum];
 }
 
 RCT_EXPORT_METHOD(resumeService:(int)service) {
-  // AurycService serviceEnum = (AurycService)service;
-  // [Auryc resumeService:serviceEnum];
+  AurycService serviceEnum = (AurycService)service;
+  [Auryc resumeService:serviceEnum];
 }
 
 RCT_REMAP_METHOD(isPausedForService,
@@ -199,9 +199,9 @@ RCT_REMAP_METHOD(isPausedForService,
                  isPausedForServiceResolver:(RCTPromiseResolveBlock)resolve
                  isPausedForServiceRejecter:(RCTPromiseRejectBlock)reject){
   
-  // AurycService serviceEnum = (AurycService)service;
-  // AurycScope scope = [Auryc isPausedForService:serviceEnum];
-  // resolve(@(scope));
+  AurycService serviceEnum = (AurycService)service;
+  AurycScope scope = [Auryc isPausedForService:serviceEnum];
+  resolve(@(scope));
 }
 @end
 
