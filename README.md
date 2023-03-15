@@ -86,7 +86,7 @@ npm install rn-auryc-sdk
 
 3. Call the following method when your app starts (when your root component loads):
 ```javascript
-import Auryc from 'react-native-auryc';
+import Auryc from 'rn-auryc-sdk';
 
 onCreate () {
   Auryc.initialize(YOUR_SITE_TOKEN, YOUR_SITE_ID);
