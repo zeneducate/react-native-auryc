@@ -35,7 +35,7 @@ android {
 repositories {
     mavenCentral()
     maven {
-        url "https://bintray.auryc.com/repository/android-sdk-voc/"
+        url "https://bintray.auryc.com/repository/android-sdk/"
     }
     maven { url 'https://maven.google.com' }
     maven {
@@ -46,7 +46,7 @@ repositories {
 
 dependencies {
     api "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.auryc:android-sdk-voc:2.3.1'
+    implementation 'com.auryc:android-sdk:2.2.+'
 }
 
 

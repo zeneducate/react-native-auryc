@@ -43,28 +43,6 @@ typedef enum : NSUInteger {
 + (void)initialize:(NSString *)token siteId:(NSString *)siteId development:(BOOL)dev;
 + (void)initialize:(NSString *)token siteId:(NSString *)siteId userId:(NSString *)userId development:(BOOL)dev;
 
-+ (Auryc *)mainInstance;
-+ (NSString *)aurycSDKVersionString;
-
-- (void)addSessionProperties:(NSDictionary<NSString *, NSObject *> *)properties;
-- (void)addUserProperties:(NSDictionary<NSString *, NSObject *> *)properties;
-- (void)identify:(NSString *)identity;
-- (void)track:(NSString *)key;
-- (void)track:(NSString *)key properties:(NSDictionary *)properties;
-
-// Feedback
-- (void)showFeedback:(NSString *)feedbackID;                                                                               // shows feedback in key window's root view controller; animated = true
-- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController;                            // shows feedback in passed view controller; animated = true
-- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController animated:(BOOL)animated;    // shows feedback in passed view controller allowing 'animated' to be set
-
-
-#if VOC_ONLY == 1
-
-#else
-
-- (void)pause;
-- (void)resume;
-
 + (void)disable;
 
 + (void)pauseService:(AurycService)service scope:(AurycScope)scope;
@@ -74,6 +52,19 @@ typedef enum : NSUInteger {
 + (void)enableEventMarkerGesture:(BOOL)enable;
 + (void)overrideAppVersionConfiguration:(NSString *)appVersion;
 + (void)overrideBuildTypeConfiguration:(NSString *)buildType;
+
+
++ (Auryc *)mainInstance;
++ (NSString *)aurycSDKVersionString;
+
+- (void)pause;
+- (void)resume;
+
+- (void)addSessionProperties:(NSDictionary<NSString *, NSObject *> *)properties;
+- (void)addUserProperties:(NSDictionary<NSString *, NSObject *> *)properties;
+- (void)identify:(NSString *)identity;
+- (void)track:(NSString *)key;
+- (void)track:(NSString *)key properties:(NSDictionary *)properties;
 
 // masking
 - (void)markScreenAsSensitiveInformation;
@@ -88,6 +79,11 @@ typedef enum : NSUInteger {
 // Event Marker
 - (void)startEventMarker;
 - (void)stopEventMarker;
+
+// Feedback
+- (void)showFeedback:(NSString *)feedbackID;                                                                               // shows feedback in key window's root view controller; animated = true
+- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController;                            // shows feedback in passed view controller; animated = true
+- (void)showFeedback:(NSString *)feedbackID inViewController:(UIViewController *)viewController animated:(BOOL)animated;    // shows feedback in passed view controller allowing 'animated' to be set
 
 // user id whitelist
 - (void)isUserEnabled:(NSString *)userId withCompletion:(void (^)(bool isEnabled))completion;
@@ -113,8 +109,5 @@ typedef enum : NSUInteger {
 // crash debugging
 - (NSString *)previousSessionId;
 - (void)handleSendingCrashReport:(NSDictionary *)crashReport forSessionID:(NSString *)sessionId;
-
-#endif
-
 @end
 
