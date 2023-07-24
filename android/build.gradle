@@ -46,7 +46,7 @@ repositories {
 
 dependencies {
     api "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.auryc:android-sdk:2.2.+'
+    implementation 'com.auryc:android-sdk:2.+'
 }
 
 
