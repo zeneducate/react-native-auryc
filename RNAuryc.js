@@ -158,6 +158,10 @@ class RNAuryc {
     static isPausedForService(service) {
         return RNAurycBridge.isPausedForService(service);
     }
+
+    static setLogLevel(logLevel) {
+        RNAurycBridge.setLogLevel(logLevel);
+    }
 }
 module.exports = RNAuryc;
 
