@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Example</string>
+    <string name="auryc_token">640a56249f6988bf2058681ae4e469a0</string>
+    <string name="auryc_site_id">920-E-CommerceDemo</string>
+</resources>
